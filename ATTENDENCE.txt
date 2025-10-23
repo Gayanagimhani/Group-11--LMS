@@ -16,3 +16,817 @@ CREATE TABLE ATTENDANCE (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
+
+---INSERT DATA INTO ATTENDENCE TABLE---
+
+--WEEK 1 (2025-02-03 to 2025-02-07)
+--MONDAY
+
+INSERT INTO ATTENDANCE 
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Theory','Present','No');
+
+--TUESDAY
+
+INSERT INTO ATTENDANCE 
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved) 
+VALUES
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1242','2025-02-04','Lecture','Theory','Present','No');
+
+--WEDNESDAY
+
+INSERT INTO ATTENDANCE 
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved) 
+VALUES
+('TG/2023/1701','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1702','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1703','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1704','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1705','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1706','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1707','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1708','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1709','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1710','TMS1233','2025-02-05','Lecture','Theory','Present','No');
+
+--THURSDAY
+
+INSERT INTO ATTENDANCE
+ (Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved) 
+VALUES
+('TG/2023/1701','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1222','2025-02-06','Lecture','Practical','Present','No');
+
+-- ICT1222 (Practical - both sessions treated as one attendance entry)
+
+--FRIDAY
+
+INSERT INTO ATTENDANCE 
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved) 
+VALUES
+('TG/2023/1701','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1702','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1703','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1704','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1705','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1706','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1707','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1708','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1709','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1710','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1702','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1703','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1704','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1705','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1706','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1707','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1708','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1709','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1710','ENG1222','2025-02-07','Lecture','Theory','Present','No');
+
+--WEEK 2 (2025-02-10 to 2025-02-14)
+--MONDAY
+
+INSERT INTO ATTENDANCE (Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved) VALUES
+('TG/2023/1701','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-10','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Theory','Present','No');
+
+--TUESDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Theory','Absent','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Practical','Absent','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1242','2025-02-04','Lecture','Theory','Absent','No'),
+('TG/2023/1704','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1242','2025-02-04','Lecture','Theory','Present','No');
+
+--WEDNESDAY
+
+INSERT INTO ATTENDANCE
+ (Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+ VALUES
+('TG/2023/1701','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1702','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1703','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1704','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1705','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1706','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1707','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1708','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1709','TMS1233','2025-02-12','Lecture','Theory','Present','No'),
+('TG/2023/1710','TMS1233','2025-02-12','Lecture','Theory','Present','No');
+
+--THURSDAY
+
+('TG/2023/1701','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1212','2025-02-13','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1222','2025-02-13','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1222','2025-02-13','Lecture','Practical','Present','No');
+
+--FRIDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved) 
+VALUES
+('TG/2023/1701','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1702','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1703','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1704','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1705','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1706','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1707','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1708','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1709','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1710','TCS1212','2025-02-14','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1702','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1703','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1704','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1705','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1706','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1707','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1708','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1709','ENG1222','2025-02-14','Lecture','Theory','Present','No'),
+('TG/2023/1710','ENG1222','2025-02-14','Lecture','Theory','Present','No');
+
+--WEEK 3 (2025-02-17 to 2025-02-21)
+--MONDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Theory','Present','No');
+
+--TUESDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1242','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1242','2025-02-04','Lecture','Theory','Present','No');
+
+--WEDNESDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1702','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1703','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1704','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1705','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1706','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1707','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1708','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1709','TMS1233','2025-02-05','Lecture','Theory','Present','No'),
+('TG/2023/1710','TMS1233','2025-02-05','Lecture','Theory','Present','No');
+
+--THURSDAY
+
+INSERT INTO ATTENDANCE
+ (Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1212','2025-02-06','Lecture','Theory','Absent'','No'),
+('TG/2023/1706','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1212','2025-02-06','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1222','2025-02-06','Lecture','Practical','Absent'','No'),
+('TG/2023/1706','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1222','2025-02-06','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1222','2025-02-06','Lecture','Practical','Present','No');
+
+--FRIDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1702','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1703','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1704','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1705','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1706','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1707','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1708','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1709','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1710','TCS1212','2025-02-07','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1702','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1703','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1704','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1705','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1706','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1707','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1708','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1709','ENG1222','2025-02-07','Lecture','Theory','Present','No'),
+('TG/2023/1710','ENG1222','2025-02-07','Lecture','Theory','Present','No');
+
+--WEEK 4 (2025-02-24 to 2025-02-28)
+--MONDAY-Lecture
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved) 
+VALUES
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Theory','Present','No');
+
+--Quiz
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-25','Quiz','Both','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-25','Quiz','Both','Present','No');
+
+--TUESDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1242','2025-02-25','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1242','2025-02-25','Lecture','Theory','Present','No');
+
+--WEDNESDAY-Lecture
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','TMS1233','2025-02-26','Lecture','Theory','Present','No'),
+('TG/2023/1702','TMS1233','2025-02-26','Lecture','Theory','Present','No'),
+('TG/2023/1703','TMS1233','2025-02-26','Lecture','Theory','Present','No'),
+('TG/2023/1704','TMS1233','2025-02-26','Lecture','Theory','Present','No'),
+('TG/2023/1705','TMS1233','2025-02-26','Lecture','Theory','Present','No'),
+('TG/2023/1706','TMS1233','2025-02-26','Lecture','Theory','Present','No'),
+('TG/2023/1707','TMS1233','2025-02-26','Lecture','Theory','Present','No'),
+('TG/2023/1708','TMS1233','2025-02-26','Lecture','Theory','Absent','No'),
+('TG/2023/1709','TMS1233','2025-02-26','Lecture','Theory','Present','No'),
+('TG/2023/1710','TMS1233','2025-02-26','Lecture','Theory','Present','No');
+
+--Quiz
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','TMS1233','2025-02-27','Quiz','Theory','Present','No'),
+('TG/2023/1702','TMS1233','2025-02-27','Quiz','Theory','Present','No'),
+('TG/2023/1703','TMS1233','2025-02-27','Quiz','Theory','Present','No'),
+('TG/2023/1704','TMS1233','2025-02-27','Quiz','Theory','Present','No'),
+('TG/2023/1705','TMS1233','2025-02-27','Quiz','Theory','Present','No'),
+('TG/2023/1706','TMS1233','2025-02-27','Quiz','Theory','Present','No'),
+('TG/2023/1707','TMS1233','2025-02-27','Quiz','Theory','Present','No'),
+('TG/2023/1708','TMS1233','2025-02-27','Quiz','Theory','Absent','No'),
+('TG/2023/1709','TMS1233','2025-02-27','Quiz','Theory','Present','No'),
+('TG/2023/1710','TMS1233','2025-02-27','Quiz','Theory','Present','No');
+
+--THURSDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1212','2025-02-27','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1222','2025-02-27','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1222','2025-02-27','Lecture','Practical','Present','No');
+
+--FRIDAY
+--TCS1212 Lecture
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1702','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1703','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1704','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1705','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1706','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1707','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1708','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1709','TCS1212','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1710','TCS1212','2025-02-28','Lecture','Theory','Present','No');
+
+--TCS1212 Quiz
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1702','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1703','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1704','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1705','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1706','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1707','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1708','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1709','TCS1212','2025-03-01','Quiz','Theory','Present','No'),
+('TG/2023/1710','TCS1212','2025-03-01','Quiz','Theory','Present','No');
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1702','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1703','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1704','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1705','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1706','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1707','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1708','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1709','ENG1222','2025-02-28','Lecture','Theory','Present','No'),
+('TG/2023/1710','ENG1222','2025-02-28','Lecture','Theory','Present','No');
+
+--WEEK 5 (2025-03-03 to 2025-03-07)
+
+--MONDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Theory','Present','No');
+
+--WEEK 5 (2025-03-03 to 2025-03-07)
+--MONDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Practical','Present','No'),
+
+('TG/2023/1701','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1706','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1233','2025-02-03','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1233','2025-02-03','Lecture','Theory','Present','No');
+
+--TUESDAY
+
+--ICT1253-Lecture
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Theory','Absent','Yes'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1253','2025-02-04','Lecture','Practical','Absent','Yes'),
+('TG/2023/1706','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1253','2025-02-04','Lecture','Practical','Present','No'),
+
+--ICT1253-Quiz
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1253','2025-03-05','Quiz','Both','Present','No'),
+('TG/2023/1702','ICT1253','2025-03-05','Quiz','Both','Present','No'),
+('TG/2023/1703','ICT1253','2025-03-05','Quiz','Both','Present','No'),
+('TG/2023/1704','ICT1253','2025-03-05','Quiz','Both','Present','No'),
+('TG/2023/1705','ICT1253','2025-03-05','Quiz','Both','Absent','No'),
+('TG/2023/1706','ICT1253','2025-03-05','Quiz','Both','Present','No'),
+('TG/2023/1707','ICT1253','2025-03-05','Quiz','Both','Present','No'),
+('TG/2023/1708','ICT1253','2025-03-05','Quiz','Both','Present','No'),
+('TG/2023/1709','ICT1253','2025-03-05','Quiz','Both','Present','No'),
+('TG/2023/1710','ICT1253','2025-03-05','Quiz','Both','Present','No');
+
+--ICT1242-Lecture
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1242','2025-03-04','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1242','2025-03-04','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1242','2025-03-04','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1242','2025-03-04','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1242','2025-03-04','Lecture','Theory','Absent','No'),
+('TG/2023/1706','ICT1242','2025-03-04','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1242','2025-03-04','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1242','2025-03-04','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1242','2025-03-04','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1242','2025-03-04','Lecture','Theory','Present','No');
+
+--ICT1242-Quiz
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1242','2025-03-05','Quiz','Theory','Present','No'),
+('TG/2023/1702','ICT1242','2025-03-05','Quiz','Theory','Present','No'),
+('TG/2023/1703','ICT1242','2025-03-05','Quiz','Theory','Present','No'),
+('TG/2023/1704','ICT1242','2025-03-05','Quiz','Theory','Present','No'),
+('TG/2023/1705','ICT1242','2025-03-05','Quiz','Theory','Absent','Yes'),
+('TG/2023/1706','ICT1242','2025-03-05','Quiz','Theory','Present','No'),
+('TG/2023/1707','ICT1242','2025-03-05','Quiz','Theory','Present','No'),
+('TG/2023/1708','ICT1242','2025-03-05','Quiz','Theory','Present','No'),
+('TG/2023/1709','ICT1242','2025-03-05','Quiz','Theory','Present','No'),
+('TG/2023/1710','ICT1242','2025-03-05','Quiz','Theory','Present','No');
+
+--WEDNESDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1702','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1703','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1704','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1705','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1706','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1707','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1708','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1709','TMS1233','2025-03-05','Lecture','Theory','Present','No'),
+('TG/2023/1710','TMS1233','2025-03-05','Lecture','Theory','Present','No');
+
+--THURSDAY
+--ICT1212 (Theory) + QUIZ
+--Lecture
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1212','2025-03-06','Lecture','Theory','Present','No'),
+('TG/2023/1702','ICT1212','2025-03-06','Lecture','Theory','Present','No'),
+('TG/2023/1703','ICT1212','2025-03-06','Lecture','Theory','Present','No'),
+('TG/2023/1704','ICT1212','2025-03-06','Lecture','Theory','Present','No'),
+('TG/2023/1705','ICT1212','2025-03-06','Lecture','Theory','Absent','Yes'),
+('TG/2023/1706','ICT1212','2025-03-06','Lecture','Theory','Present','No'),
+('TG/2023/1707','ICT1212','2025-03-06','Lecture','Theory','Present','No'),
+('TG/2023/1708','ICT1212','2025-03-06','Lecture','Theory','Present','No'),
+('TG/2023/1709','ICT1212','2025-03-06','Lecture','Theory','Present','No'),
+('TG/2023/1710','ICT1212','2025-03-06','Lecture','Theory','Present','No');
+
+--ICT1212-Quiz
+
+INSERT INTO ATTENDANCE 
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved) 
+VALUES
+('TG/2023/1701','ICT1212','2025-03-07','Quiz','Theory','Present','No'),
+('TG/2023/1702','ICT1212','2025-03-07','Quiz','Theory','Present','No'),
+('TG/2023/1703','ICT1212','2025-03-07','Quiz','Theory','Present','No'),
+('TG/2023/1704','ICT1212','2025-03-07','Quiz','Theory','Present','No'),
+('TG/2023/1705','ICT1212','2025-03-07','Quiz','Theory','Absent','No'),
+('TG/2023/1706','ICT1212','2025-03-07','Quiz','Theory','Present','No'),
+('TG/2023/1707','ICT1212','2025-03-07','Quiz','Theory','Present','No'),
+('TG/2023/1708','ICT1212','2025-03-07','Quiz','Theory','Present','No'),
+('TG/2023/1709','ICT1212','2025-03-07','Quiz','Theory','Present','No'),
+('TG/2023/1710','ICT1212','2025-03-07','Quiz','Theory','Present','No');
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1702','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1703','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1704','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1705','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1706','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1707','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1708','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1709','ICT1222','2025-03-06','Lecture','Practical','Present','No'),
+('TG/2023/1710','ICT1222','2025-03-06','Lecture','Practical','Present','No');
+
+--FRIDAY
+
+INSERT INTO ATTENDANCE
+(Reg_no, Course_id, Date, Date_status, Session_type, Attendance_status, Medical_approved)
+VALUES
+('TG/2023/1701','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1702','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1703','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1704','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1705','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1706','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1707','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1708','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1709','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1710','TCS1212','2025-03-07','Lecture','Theory','Present','No'),
+
+('TG/2023/1701','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1702','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1703','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1704','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1705','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1706','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1707','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1708','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1709','ENG1222','2025-03-07','Lecture','Theory','Present','No'),
+('TG/2023/1710','ENG1222','2025-03-07','Lecture','Theory','Present','No');
+
