@@ -33,3 +33,48 @@ VALUES
 ('ICT1222', 'TG/2022/1503', 45, 40, 38, 72, 58.8),  -- CA fail
 ('ICT1222', 'TG/2022/1504', 70, 62, 68, 35, 49.0),  -- exam fail
 ('ICT1222', 'TG/2022/1505', 78, 68, 72, 70, 71.2);  -- repeat pass
+
+
+
+
+CREATE TABLE SERVER_SIDE_WEB (
+    Course_id VARCHAR(8) NOT NULL,
+    Reg_no VARCHAR(13) NOT NULL,
+    Q1 DECIMAL(5,2),
+    Q2 DECIMAL(5,2),
+    Q3 DECIMAL(5,2),
+    Project DECIMAL(5,2),
+    Mid DECIMAL(5,2),
+    CA_marks DECIMAL(5,2),
+    END_marks DECIMAL(5,2),
+    Final_marks DECIMAL(5,2),
+    PRIMARY KEY (Course_id, Reg_no),
+    FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
+);
+
+
+
+
+INSERT INTO SERVER_SIDE_WEB 
+(Course_id, Reg_no, Q1, Q2, Q3, Project, Mid, CA_marks, END_marks, Final_marks)
+VALUES
+-- Proper Students (2023 Batch)
+('ICT1233', 'TG/2023/1701', 15, 18, 20, 22, 20, 75, 82, 79.2),
+('ICT1233', 'TG/2023/1702', 10, 12, 9, 15, 12, 46, 38, 41.2),
+('ICT1233', 'TG/2023/1703', 14, 17, 15, 19, 17, 64, 70, 67.6),
+('ICT1233', 'TG/2023/1704', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('ICT1233', 'TG/2023/1705', 19, 18, 20, 23, 22, 82, 80, 80.8),
+('ICT1233', 'TG/2023/1706', 14, 15, 16, 17, 16, 62, 66, 64.4),
+('ICT1233', 'TG/2023/1707', 20, 19, 20, 23, 22, 84, 88, 86.4),
+('ICT1233', 'TG/2023/1708', 13, 14, 13, 16, 15, 58, 35, 44.8),
+('ICT1233', 'TG/2023/1709', 10, 12, 11, 15, 13, 48, 72, 62.4),
+('ICT1233', 'TG/2023/1710', 18, 19, 17, 20, 19, 76, 83, 80.6),
+
+-- Repeat Students (2022 Batch)
+('ICT1233', 'TG/2022/1501', 15, 16, 14, 19, 18, 65, 68, 66.8),
+('ICT1233', 'TG/2022/1502', 14, 15, 15, 16, 17, 62, 70, 66.8),
+('ICT1233', 'TG/2022/1503', 10, 11, 9, 13, 11, 43, 75, 62.8),
+('ICT1233', 'TG/2022/1504', 15, 13, 14, 16, 15, 57, 38, 45.2),
+('ICT1233', 'TG/2022/1505', 16, 17, 18, 19, 18, 72, 75, 73.8);
+
