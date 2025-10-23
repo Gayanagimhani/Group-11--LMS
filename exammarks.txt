@@ -1,0 +1,124 @@
+CREATE TABLE DBMS_PRACTICUM (
+    Course_id VARCHAR(8) NOT NULL,
+    Reg_no VARCHAR(13) NOT NULL,
+    Project DECIMAL(5,2),
+    Mid DECIMAL(5,2),
+    CA_marks DECIMAL(5,2),
+    END_marks DECIMAL(5,2),
+    Final_marks DECIMAL(5,2),
+    PRIMARY KEY (Course_id, Reg_no),
+    FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
+);
+
+
+INSERT INTO DBMS_PRACTICUM 
+(Course_id, Reg_no, Project, Mid, CA_marks, END_marks, Final_marks)
+VALUES
+-- Proper Students (2023 Batch)
+('ICT1222', 'TG/2023/1701', 85, 70, 75, 80, 78.0),  -- both pass
+('ICT1222', 'TG/2023/1702', 40, 35, 38, 72, 58.8),  -- CA fail
+('ICT1222', 'TG/2023/1703', 78, 68, 70, 35, 49.0),  -- exam fail
+('ICT1222', 'TG/2023/1704', NULL, NULL, NULL, NULL, NULL),  -- withdrawn
+('ICT1222', 'TG/2023/1705', 82, 72, 74, 79, 77.0),  -- both pass
+('ICT1222', 'TG/2023/1706', 80, 69, 72, 70, 71.2),  -- both pass
+('ICT1222', 'TG/2023/1707', 84, 75, 78, 81, 79.8),  -- both pass
+('ICT1222', 'TG/2023/1708', 76, 65, 70, 35, 49.0),  -- exam fail
+('ICT1222', 'TG/2023/1709', 42, 38, 37, 75, 59.2),  -- CA fail
+('ICT1222', 'TG/2023/1710', 88, 72, 77, 84, 81.2),  -- both pass
+
+-- Repeat Students (2022 Batch)
+('ICT1222', 'TG/2022/1501', 80, 65, 70, 68, 68.8),  -- repeat pass
+('ICT1222', 'TG/2022/1502', 75, 60, 65, 70, 67.0),  -- repeat pass
+('ICT1222', 'TG/2022/1503', 45, 40, 38, 72, 58.8),  -- CA fail
+('ICT1222', 'TG/2022/1504', 70, 62, 68, 35, 49.0),  -- exam fail
+('ICT1222', 'TG/2022/1505', 78, 68, 72, 70, 71.2);  -- repeat pass
+
+
+
+
+CREATE TABLE SERVER_SIDE_WEB (
+    Course_id VARCHAR(8) NOT NULL,
+    Reg_no VARCHAR(13) NOT NULL,
+    Q1 DECIMAL(5,2),
+    Q2 DECIMAL(5,2),
+    Q3 DECIMAL(5,2),
+    Project DECIMAL(5,2),
+    Mid DECIMAL(5,2),
+    CA_marks DECIMAL(5,2),
+    END_marks DECIMAL(5,2),
+    Final_marks DECIMAL(5,2),
+    PRIMARY KEY (Course_id, Reg_no),
+    FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
+);
+
+
+
+
+INSERT INTO SERVER_SIDE_WEB 
+(Course_id, Reg_no, Q1, Q2, Q3, Project, Mid, CA_marks, END_marks, Final_marks)
+VALUES
+-- Proper Students (2023 Batch)
+('ICT1233', 'TG/2023/1701', 15, 18, 20, 22, 20, 75, 82, 79.2),
+('ICT1233', 'TG/2023/1702', 10, 12, 9, 15, 12, 46, 38, 41.2),
+('ICT1233', 'TG/2023/1703', 14, 17, 15, 19, 17, 64, 70, 67.6),
+('ICT1233', 'TG/2023/1704', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('ICT1233', 'TG/2023/1705', 19, 18, 20, 23, 22, 82, 80, 80.8),
+('ICT1233', 'TG/2023/1706', 14, 15, 16, 17, 16, 62, 66, 64.4),
+('ICT1233', 'TG/2023/1707', 20, 19, 20, 23, 22, 84, 88, 86.4),
+('ICT1233', 'TG/2023/1708', 13, 14, 13, 16, 15, 58, 35, 44.8),
+('ICT1233', 'TG/2023/1709', 10, 12, 11, 15, 13, 48, 72, 62.4),
+('ICT1233', 'TG/2023/1710', 18, 19, 17, 20, 19, 76, 83, 80.6),
+
+-- Repeat Students (2022 Batch)
+('ICT1233', 'TG/2022/1501', 15, 16, 14, 19, 18, 65, 68, 66.8),
+('ICT1233', 'TG/2022/1502', 14, 15, 15, 16, 17, 62, 70, 66.8),
+('ICT1233', 'TG/2022/1503', 10, 11, 9, 13, 11, 43, 75, 62.8),
+('ICT1233', 'TG/2022/1504', 15, 13, 14, 16, 15, 57, 38, 45.2),
+('ICT1233', 'TG/2022/1505', 16, 17, 18, 19, 18, 72, 75, 73.8);
+
+
+
+
+CREATE TABLE COMPUTER_ARCHITECTURE (
+    Course_id VARCHAR(8) NOT NULL,
+    Reg_no VARCHAR(13) NOT NULL,
+    Q1 DECIMAL(5,2),
+    Q2 DECIMAL(5,2),
+    Q3 DECIMAL(5,2),
+    Assessment DECIMAL(5,2),
+    Mid DECIMAL(5,2),
+    CA_marks DECIMAL(5,2),
+    END_marks DECIMAL(5,2),
+    Final_marks DECIMAL(5,2),
+    PRIMARY KEY (Course_id, Reg_no),
+    FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
+);
+
+
+INSERT INTO COMPUTER_ARCHITECTURE 
+(Course_id, Reg_no, Q1, Q2, Q3, Assessment, Mid, CA_marks, END_marks, Final_marks)
+VALUES
+-- Proper Students (2023 Batch)
+('ICT1242', 'TG/2023/1701', 14, 16, 15, 18, 17, 65, 78, 72.8),
+('ICT1242', 'TG/2023/1702', 9, 10, 8, 12, 11, 40, 35, 37.0),
+('ICT1242', 'TG/2023/1703', 13, 15, 14, 16, 15, 60, 62, 61.2),
+('ICT1242', 'TG/2023/1704', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('ICT1242', 'TG/2023/1705', 17, 18, 19, 20, 18, 78, 82, 80.8),
+('ICT1242', 'TG/2023/1706', 15, 14, 13, 16, 15, 63, 66, 64.8),
+('ICT1242', 'TG/2023/1707', 18, 19, 20, 19, 20, 85, 88, 86.8),
+('ICT1242', 'TG/2023/1708', 14, 13, 15, 14, 13, 57, 36, 44.4),
+('ICT1242', 'TG/2023/1709', 10, 11, 9, 12, 10, 45, 68, 60.8),
+('ICT1242', 'TG/2023/1710', 16, 18, 17, 19, 17, 75, 83, 80.2),
+
+-- Repeat Students (2022 Batch)
+('ICT1242', 'TG/2022/1501', 14, 15, 16, 17, 15, 65, 70, 68.0),
+('ICT1242', 'TG/2022/1502', 15, 13, 16, 14, 15, 63, 68, 66.0),
+('ICT1242', 'TG/2022/1503', 8, 9, 10, 11, 10, 38, 72, 56.8),
+('ICT1242', 'TG/2022/1504', 13, 12, 14, 13, 12, 54, 35, 42.4),
+('ICT1242', 'TG/2022/1505', 16, 17, 18, 17, 18, 72, 75, 73.8);
+
+
+
