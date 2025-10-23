@@ -13,11 +13,11 @@ GRANT ALL PRIVILEGES ON *.*
 TO 'Lecturer'@'localhost';
 
 CREATE USER 'TechnicalOfficer'@'localhost' IDENTIFIED BY 'technical1234';
-GRANT SELECT,INSERT,UPDATE,DELETE ON TECMIS.Attendence
+GRANT SELECT,INSERT,UPDATE,DELETE ON ATTENDENCE
 TO 'TechnicalOfficer'@'localhost';
 
 CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON TECMIS.Final_attendance
+GRANT SELECT ON FINAL ATTENDENCE
 TO 'Student'@'localhost';
-GRANT SELECT ON TECMIS.Final_marks
+GRANT SELECT ON FINAL ATTENDENCE
 TO 'Student'@'localhost';
