@@ -1,0 +1,35 @@
+CREATE TABLE DBMS_PRACTICUM (
+    Course_id VARCHAR(8) NOT NULL,
+    Reg_no VARCHAR(13) NOT NULL,
+    Project DECIMAL(5,2),
+    Mid DECIMAL(5,2),
+    CA_marks DECIMAL(5,2),
+    END_marks DECIMAL(5,2),
+    Final_marks DECIMAL(5,2),
+    PRIMARY KEY (Course_id, Reg_no),
+    FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
+);
+
+
+INSERT INTO DBMS_PRACTICUM 
+(Course_id, Reg_no, Project, Mid, CA_marks, END_marks, Final_marks)
+VALUES
+-- Proper Students (2023 Batch)
+('ICT1222', 'TG/2023/1701', 85, 70, 75, 80, 78.0),  -- both pass
+('ICT1222', 'TG/2023/1702', 40, 35, 38, 72, 58.8),  -- CA fail
+('ICT1222', 'TG/2023/1703', 78, 68, 70, 35, 49.0),  -- exam fail
+('ICT1222', 'TG/2023/1704', NULL, NULL, NULL, NULL, NULL),  -- withdrawn
+('ICT1222', 'TG/2023/1705', 82, 72, 74, 79, 77.0),  -- both pass
+('ICT1222', 'TG/2023/1706', 80, 69, 72, 70, 71.2),  -- both pass
+('ICT1222', 'TG/2023/1707', 84, 75, 78, 81, 79.8),  -- both pass
+('ICT1222', 'TG/2023/1708', 76, 65, 70, 35, 49.0),  -- exam fail
+('ICT1222', 'TG/2023/1709', 42, 38, 37, 75, 59.2),  -- CA fail
+('ICT1222', 'TG/2023/1710', 88, 72, 77, 84, 81.2),  -- both pass
+
+-- Repeat Students (2022 Batch)
+('ICT1222', 'TG/2022/1501', 80, 65, 70, 68, 68.8),  -- repeat pass
+('ICT1222', 'TG/2022/1502', 75, 60, 65, 70, 67.0),  -- repeat pass
+('ICT1222', 'TG/2022/1503', 45, 40, 38, 72, 58.8),  -- CA fail
+('ICT1222', 'TG/2022/1504', 70, 62, 68, 35, 49.0),  -- exam fail
+('ICT1222', 'TG/2022/1505', 78, 68, 72, 70, 71.2);  -- repeat pass
