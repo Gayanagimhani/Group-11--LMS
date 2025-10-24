@@ -1,0 +1,13 @@
+CREATE TABLE STUDENT (
+    Reg_no CHAR(12) NOT NULL,
+    F_name VARCHAR(40) NOT NULL,
+    L_name VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Address TEXT,
+    Dob DATE,
+    Year VARCHAR(10),
+    Status VARCHAR(7),
+    Gender CHAR(1),
+    Dep_name VARCHAR(3),
+    PRIMARY KEY(Reg_no)
+);
