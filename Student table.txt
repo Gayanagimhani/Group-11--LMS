@@ -33,7 +33,7 @@ VALUES
 ('TG/2022/1504', 'Kavindi', 'Alwis', 'kavindi.alwis@email.com','56 Beach Road, Kalutara', '2001-03-25', '2021(2022)', 'repeat', 'F', 'ICT'),
 ('TG/2022/1505', 'Prasanna', 'Jayasuriya', 'prasanna.jaya@email.com', '234 Garden Lane, Gampaha', '2001-07-30', '2021(2022)', 'repeat', 'M', 'ICT');
 
-INSERT INTO STUDENT 
+INSERT INTO STUDENT
 VALUES
 ('TG/2023/1801', 'Chamara', 'Ekanayake', 'chamara.ekanayake@email.com', '123 Forest Lane, Nugegoda', '2002-09-14', '2022(2023)', 'suspend', 'M', 'ICT'),
 ('TG/2023/1802', 'Shanika', 'Dissanayake', 'shanika.dissanayake@email.com', '45 Mountain View, Maharagama', '2003-01-28', '2022(2023)', 'suspend', 'F', 'ICT');
