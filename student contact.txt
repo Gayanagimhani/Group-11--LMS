@@ -1,0 +1,55 @@
+CREATE TABLE STUDENT_CONTACT (
+    Reg_no CHAR(12),
+    Contact CHAR(10),
+    Contact_type VARCHAR(15) DEFAULT 'Mobile', 
+    PRIMARY KEY (Reg_no,Contact),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no) ON DELETE CASCADE
+);
+
+
+
+INSERT INTO STUDENT_CONTACT (Reg_no, Contact, Contact_type) VALUES
+
+('TG/2023/1701', '0712345678', 'Mobile'),
+('TG/2023/1701', '0112345678', 'Home'),
+
+('TG/2023/1702', '0723456789', 'Mobile'),
+
+('TG/2023/1703', '0734567890', 'Mobile'),
+('TG/2023/1703', '0771234567', 'WhatsApp'),
+
+('TG/2023/1704', '0745678901', 'Mobile'),
+
+('TG/2023/1705', '0756789012', 'Mobile'),
+('TG/2023/1705', '0113456789', 'Home'),
+
+('TG/2023/1706', '0767890123', 'Mobile'),
+
+('TG/2023/1707', '0778901234', 'Mobile'),
+('TG/2023/1707', '0332276543', 'Home'),
+
+('TG/2023/1708', '0789012345', 'Mobile'),
+
+('TG/2023/1709', '0790123456', 'Mobile'),
+
+('TG/2023/1710', '0701234567', 'Mobile'),
+('TG/2023/1710', '0552345678', 'Home'),
+
+('TG/2022/1501', '0719876543', 'Mobile'),
+
+('TG/2022/1502', '0728765432', 'Mobile'),
+('TG/2022/1502', '0387654321', 'Home'),
+
+('TG/2022/1503', '0737654321', 'Mobile'),
+
+('TG/2022/1504', '0746543210', 'Mobile'),
+
+('TG/2022/1505', '0755432109', 'Mobile'),
+('TG/2022/1505', '0337654321', 'Home'),
+
+('TG/2023/1801', '0781122334', 'Mobile'),
+('TG/2023/1801', '0112233445', 'Home'),
+
+('TG/2023/1802', '0793344556', 'Mobile'),
+('TG/2023/1802', '0776655443', 'Emergency'),
+('TG/2023/1802', '0113344556', 'Home');
