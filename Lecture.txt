@@ -1,0 +1,10 @@
+CREATE TABLE LECTURE (
+    Lec_id CHAR(6) PRIMARY KEY,
+    F_name VARCHAR(40) NOT NULL,
+    L_name VARCHAR(40) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Role VARCHAR(50),
+    Gender CHAR(1),
+    Dep_name VARCHAR(3)
+);
+
