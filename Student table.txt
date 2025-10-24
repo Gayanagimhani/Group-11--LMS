@@ -1,0 +1,27 @@
+CREATE TABLE STUDENT (
+    Reg_no CHAR(12) NOT NULL,
+    F_name VARCHAR(40) NOT NULL,
+    L_name VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Address TEXT,
+    Dob DATE,
+    Year VARCHAR(10),
+    Status VARCHAR(7),
+    Gender CHAR(1),
+    Dep_name VARCHAR(3),
+    PRIMARY KEY(Reg_no)
+);
+
+INSERT INTO STUDENT
+VALUES 
+('TG/2023/1701', 'Kamal', 'Silva', 'kamal.silva@email.com',  '123 Main Street, Colombo 05', '2002-03-15', '2022(2023)', 'proper', 'M', 'ICT'),
+('TG/2023/1702', 'Nayana', 'Fernando', 'nayana.fernando@email.com','45 Galle Road, Moratuwa', '2003-05-22', '2022(2023)', 'proper', 'F', 'ICT'),
+('TG/2023/1703', 'Dinesh', 'Perera', 'dinesh.perera@email.com', '78 Kandy Road, Kadawatha', '2002-11-30', '2022(2023)', 'proper', 'M', 'ICT'),
+('TG/2023/1704', 'Sachini', 'Rathnayake', 'sachini.rathnayake@email.com', '56 Temple Street, Kandy', '2003-07-08', '2022(2023)', 'proper', 'F', 'ICT'),
+('TG/2023/1705', 'Amila', 'Wickramasinghe', 'amila.wickramasinghe@email.com','234 Negombo Road, Seeduwa', '2002-12-25', '2022(2023)', 'proper', 'M', 'ICT'),
+('TG/2023/1706', 'Priyanka', 'Jayawardena', 'priyanka.jayawardena@email.com', '89 Matara Road, Galle', '2003-02-14', '2022(2023)', 'proper', 'F', 'ICT'),
+('TG/2023/1707', 'Maleesha', 'Perera', 'sdgmjayani@gmail.com', 'No/27/2/A, Pansilupura, Minuwangoda', '2003-07-12', '2022(2023)', 'proper', 'F', 'ICT'),
+('TG/2023/1708', 'Lahiru', 'Abeysekara', 'lahiru.abeysekara@email.com', '67 Kurunegala Road, Puttalam', '2002-09-18', '2022(2023)', 'proper', 'M', 'ICT'),
+('TG/2023/1709', 'Chamodi', 'Weerasinghe', 'chamodi.weerasinghe@email.com', '123 Anuradhapura Road, Kurunegala', '2003-04-05', '2022(2023)', 'proper', 'F', 'ICT'),
+('TG/2023/1710', 'Isuru', 'Bandara', 'isuru.bandara@email.com', '45 Badulla Road, Monaragala', '2002-08-11', '2022(2023)', 'proper', 'M', 'ICT');
+
