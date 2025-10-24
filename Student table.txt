@@ -25,3 +25,17 @@ VALUES
 ('TG/2023/1709', 'Chamodi', 'Weerasinghe', 'chamodi.weerasinghe@email.com', '123 Anuradhapura Road, Kurunegala', '2003-04-05', '2022(2023)', 'proper', 'F', 'ICT'),
 ('TG/2023/1710', 'Isuru', 'Bandara', 'isuru.bandara@email.com', '45 Badulla Road, Monaragala', '2002-08-11', '2022(2023)', 'proper', 'M', 'ICT');
 
+INSERT INTO STUDENT
+VALUES
+('TG/2022/1501', 'Sameera', 'Gunawardena', 'sameera.guna@email.com', '123 Lake Road, Colombo 08', '2001-05-10', '2021(2022)', 'repeat', 'M', 'ICT'),
+('TG/2022/1502', 'Dilini', 'Herath', 'dilini.herath@email.com',  '45 River Street, Panadura', '2001-08-15', '2021(2022)', 'repeat', 'F', 'ICT'),
+('TG/2022/1503', 'Nuwan', 'Rajapaksa', 'nuwan.raja@email.com',  '78 Hill Side, Ratnapura', '2001-12-20', '2021(2022)', 'repeat', 'M', 'ICT'),
+('TG/2022/1504', 'Kavindi', 'Alwis', 'kavindi.alwis@email.com','56 Beach Road, Kalutara', '2001-03-25', '2021(2022)', 'repeat', 'F', 'ICT'),
+('TG/2022/1505', 'Prasanna', 'Jayasuriya', 'prasanna.jaya@email.com', '234 Garden Lane, Gampaha', '2001-07-30', '2021(2022)', 'repeat', 'M', 'ICT');
+
+INSERT INTO STUDENT 
+VALUES
+('TG/2023/1801', 'Chamara', 'Ekanayake', 'chamara.ekanayake@email.com', '123 Forest Lane, Nugegoda', '2002-09-14', '2022(2023)', 'suspend', 'M', 'ICT'),
+('TG/2023/1802', 'Shanika', 'Dissanayake', 'shanika.dissanayake@email.com', '45 Mountain View, Maharagama', '2003-01-28', '2022(2023)', 'suspend', 'F', 'ICT');
+
+
