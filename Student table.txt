@@ -39,3 +39,11 @@ VALUES
 ('TG/2023/1802', 'Shanika', 'Dissanayake', 'shanika.dissanayake@email.com', '45 Mountain View, Maharagama', '2003-01-28', '2022(2023)', 'suspend', 'F', 'ICT');
 
 
+CREATE TABLE STUDENT_CONTACT (
+    Reg_no CHAR(12),
+    Contact CHAR(10),
+    Contact_type VARCHAR(15) DEFAULT 'Mobile', 
+    PRIMARY KEY (Reg_no,Contact),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no) ON DELETE CASCADE
+);
+
