@@ -201,3 +201,45 @@ VALUES
 ('ICT1212', 'TG/2022/1503', 11, 10, 9, 13, 45, 70, 58),  
 ('ICT1212', 'TG/2022/1504', 15, 16, 17, 14, 62, 39, 48), 
 ('ICT1212', 'TG/2022/1505', 18, 19, 17, 18, 72, 77, 75);
+
+
+
+
+
+CREATE TABLE DISCRETE_MATHEMATICS (
+    Course_id VARCHAR(8) NOT NULL,
+    Reg_no VARCHAR(13) NOT NULL,
+    Q1 DECIMAL(5,2),
+    Q2 DECIMAL(5,2),
+    Q3 DECIMAL(5,2),
+    Mid DECIMAL(5,2),
+    CA_marks DECIMAL(5,2),
+    END_marks DECIMAL(5,2),
+    Final_marks DECIMAL(5,2),
+    PRIMARY KEY (Course_id, Reg_no),
+    FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
+);
+
+
+INSERT INTO DISCRETE_MATHEMATICS
+(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks)
+VALUES
+-- Proper Students (2023 Batch)
+('TMS1233', 'TG/2023/1701', 16, 18, 17, 19, 70, 82, 78),
+('TMS1233', 'TG/2023/1702', 11, 10, 12, 13, 46, 75, 61),   
+('TMS1233', 'TG/2023/1703', 17, 15, 14, 16, 62, 38, 45),   
+('TMS1233', 'TG/2023/1704', NULL, NULL, NULL, NULL, NULL, NULL, NULL), 
+('TMS1233', 'TG/2023/1705', 18, 19, 17, 18, 74, 85, 80),
+('TMS1233', 'TG/2023/1706', 14, 13, 12, 15, 55, 67, 61),
+('TMS1233', 'TG/2023/1707', 19, 18, 20, 20, 78, 88, 84),
+('TMS1233', 'TG/2023/1708', 13, 12, 14, 13, 52, 39, 44),   
+('TMS1233', 'TG/2023/1709', 10, 9, 8, 12, 39, 65, 50),     
+('TMS1233', 'TG/2023/1710', 17, 18, 17, 19, 72, 79, 75),
+
+-- Repeat Students (2022 Batch)
+('TMS1233', 'TG/2022/1501', 14, 15, 13, 15, 57, 72, 66),
+('TMS1233', 'TG/2022/1502', 13, 14, 15, 13, 55, 68, 63),
+('TMS1233', 'TG/2022/1503', 12, 10, 11, 13, 46, 70, 59),   
+('TMS1233', 'TG/2022/1504', 15, 16, 17, 14, 62, 38, 47),   
+('TMS1233', 'TG/2022/1505', 18, 19, 17, 18, 72, 76, 74);
