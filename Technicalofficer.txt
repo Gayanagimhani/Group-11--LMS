@@ -1,0 +1,10 @@
+CREATE TABLE TECHNICAL_OFFICER (
+    Tec_id CHAR(6) ,
+    F_name VARCHAR(40) NOT NULL,
+    L_name VARCHAR(40) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Gender CHAR(1),
+    Department_name VARCHAR(3),
+    Work_Area VARCHAR(100),
+    PRIMARY KEY(Tec_id)
+);
