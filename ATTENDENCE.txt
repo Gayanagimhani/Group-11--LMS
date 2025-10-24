@@ -1,8 +1,8 @@
 ---CREATE TABLE ATTENDENCE---
 
 CREATE TABLE ATTENDANCE (
-    Reg_no VARCHAR(13) NOT NULL,
-    Course_id VARCHAR(8) NOT NULL,
+    Reg_no CHAR(12) NOT NULL,
+    Course_id CHAR(7) NOT NULL,
     Date DATE NOT NULL,
     Date_status ENUM('Lecture', 'Quiz', 'Mid', 'End') NOT NULL,
     Session_type ENUM('Theory', 'Practical', 'Both') NOT NULL,
