@@ -1,0 +1,7 @@
+CREATE TABLE TECHNICAL_OFFICER_CONTACT (
+    Tec_id CHAR(6),
+    Contact CHAR(10),
+    Contact_type VARCHAR(20) DEFAULT 'Mobile',
+    PRIMARY KEY (Tec_id, Contact),
+    FOREIGN KEY (Tec_id) REFERENCES TECHNICAL_OFFICER(Tec_id) ON DELETE CASCADE
+);
