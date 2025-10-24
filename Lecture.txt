@@ -18,3 +18,13 @@ INSERT INTO LECTURE (Lec_id, F_name, L_name, Email, Role, Gender, Dep_name) VALU
 ('LEC007', 'Amal', 'Bandara', 'amal.bandara@email.com',  'senior, coordinator', 'M', 'MUL'),
 ('LEC008','Amith','Pussalla','amith23alla@email.com','senior,coordinator','M','ET');
 
+
+CREATE TABLE DEAN (
+    Lec_id CHAR(6) PRIMARY KEY,
+    Start_date DATE NOT NULL,
+    End_date DATE,
+    Dean_specialty VARCHAR(100),
+    Office_location VARCHAR(100),
+    FOREIGN KEY (Lec_id) REFERENCES LECTURE(Lec_id) ON DELETE CASCADE
+);
+
