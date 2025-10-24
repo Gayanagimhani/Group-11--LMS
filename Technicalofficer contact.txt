@@ -5,3 +5,24 @@ CREATE TABLE TECHNICAL_OFFICER_CONTACT (
     PRIMARY KEY (Tec_id, Contact),
     FOREIGN KEY (Tec_id) REFERENCES TECHNICAL_OFFICER(Tec_id) ON DELETE CASCADE
 );
+
+INSERT INTO TECHNICAL_OFFICER_CONTACT (Tec_id, Contact, Contact_type) VALUES
+('TEC001', '0712233445', 'Mobile'),
+('TEC001', '0113344556', 'Office'),
+('TEC001', '0778877665', 'Emergency'),
+
+('TEC002', '0723344556', 'Mobile'),
+('TEC002', '0114455667', 'Office'),
+
+('TEC003', '0734455667', 'Mobile'),
+
+('TEC004', '0745566778', 'Mobile'),
+('TEC004', '0115566778', 'Office'),
+
+('TEC005', '0756677889', 'Mobile'),
+('TEC005', '0779988776', 'WhatsApp'),
+
+('TEC006', '0767788990', 'Mobile'),
+
+('TEC007', '0778899001', 'Mobile'),
+('TEC007', '0116677889', 'Office');
