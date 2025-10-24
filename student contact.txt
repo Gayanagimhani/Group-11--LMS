@@ -8,7 +8,8 @@ CREATE TABLE STUDENT_CONTACT (
 
 
 
-INSERT INTO STUDENT_CONTACT (Reg_no, Contact, Contact_type) VALUES
+INSERT INTO STUDENT_CONTACT (Reg_no, Contact, Contact_type) 
+VALUES
 
 ('TG/2023/1701', '0712345678', 'Mobile'),
 ('TG/2023/1701', '0112345678', 'Home'),
