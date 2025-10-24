@@ -28,3 +28,8 @@ CREATE TABLE DEAN (
     FOREIGN KEY (Lec_id) REFERENCES LECTURE(Lec_id) ON DELETE CASCADE
 );
 
+INSERT INTO DEAN (Lec_id, Start_date, End_date, Dean_specialty, Office_location) 
+VALUES
+('LEC001', '2022-01-01', '2025-12-31', 'Academic Affairs', 'ICT Building - Room 101'),
+('LEC002', '2021-06-01', '2024-05-31', 'Student Affairs', 'Main Building - Room 205'),
+('LEC005', '2023-03-15', '2026-03-14', 'Research and Development', 'Research Wing - Room 305');
