@@ -1,5 +1,5 @@
 CREATE TABLE TECHNICAL_OFFICER (
-    Tec_id CHAR(6) ,
+    Tec_id CHAR(6) NOT NULL,
     F_name VARCHAR(40) NOT NULL,
     L_name VARCHAR(40) NOT NULL,
     Email VARCHAR(100) UNIQUE,
