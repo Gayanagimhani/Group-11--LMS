@@ -1,0 +1,19 @@
+--CREATE  FINAL_ATTENDANCE TABLE
+
+CREATE TABLE FINAL_ATTENDANCE (
+    Reg_no VARCHAR(12) NOT NULL,
+    Course_id VARCHAR(7) NOT NULL,
+    Number_of_days_held INT NOT NULL,
+    Number_of_days_attended INT NOT NULL,
+    Number_of_medicals INT DEFAULT 0,
+    Percentage DECIMAL(5,2),
+    Eligibility ENUM('Eligible', 'Not Eligible') DEFAULT 'Not Eligible',
+
+    PRIMARY KEY (Reg_no, Course_id),
+    FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no) 
+	ON DELETE CASCADE 
+	ON UPDATE CASCADE,
+    FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id) 
+	ON DELETE CASCADE 
+	ON UPDATE CASCADE
+);
