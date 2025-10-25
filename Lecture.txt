@@ -35,14 +35,3 @@ VALUES
 ('LEC002', '2021-06-01', '2024-05-31', 'Student Affairs', 'Main Building - Room 205'),
 ('LEC005', '2023-03-15', '2026-03-14', 'Research and Development', 'Research Wing - Room 305');
 
-CREATE TABLE COURSE_UNIT (
-    Course_id VARCHAR(10) PRIMARY KEY,
-    Course_name VARCHAR(100),
-    Type ENUM('Theory', 'Practical'),
-    Course_credit INT,
-    Year ENUM('1st', '2nd', '3rd', '4th'),
-    Semester ENUM('I semester', 'II semester'),
-    Department VARCHAR(50),
-    Lec_id VARCHAR(10),
-    FOREIGN KEY (Lec_id) REFERENCES LECTURER(Lec_id)
-);
