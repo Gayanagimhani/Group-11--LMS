@@ -26,7 +26,7 @@ CREATE TABLE DEAN (
     End_date DATE,
     Dean_specialty VARCHAR(100),
     Office_location VARCHAR(100),
-    FOREIGN KEY (Lec_id) REFERENCES LECTURE(Lec_id) ON DELETE CASCADE
+    FOREIGN KEY (Lec_id) REFERENCES LECTURERE(Lec_id) ON DELETE CASCADE
 );
 
 INSERT INTO DEAN (Lec_id, Start_date, End_date, Dean_specialty, Office_location) 
