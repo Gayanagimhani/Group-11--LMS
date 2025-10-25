@@ -1,0 +1,22 @@
+CREATE TABLE LECTURERE (
+    Lec_id CHAR(6) PRIMARY KEY,
+    F_name VARCHAR(40) NOT NULL,
+    L_name VARCHAR(40) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Role VARCHAR(50),
+    Gender CHAR(1),
+    Dep_name VARCHAR(3)
+);
+
+INSERT INTO LECTURERE (Lec_id, F_name, L_name, Email, Role, Gender, Dep_name)
+VALUES
+('LEC001', 'Nuwan', 'Laksiri', 'NuwanLaksiri001@gmail.com',  'senior, seniorlec', 'M', 'ICT'),
+('LEC002', 'Kamala', 'Perera', 'kamala.perera@email.com',  'head, professor', 'F', 'ICT'),
+('LEC003', 'Sunil', 'Wijesinghe', 'sunil.wijesinghe@email.com', 'assistant, lecturer', 'M', 'ICT'),
+('LEC004', 'Nadeesha', 'Silva', 'nadeesha.silva@email.com',  'seniorlec, coordinator', 'F', 'ICT'),
+('LEC005', 'Rajitha', 'Fernando', 'rajitha.fernando@email.com', 'professor, researcher', 'M', 'ICT'),
+('LEC006', 'Chathuri', 'Rathnayake', 'chathuri.rathnayake@email.com',  'lecturer', 'F', 'MUL'),
+('LEC007', 'Amal', 'Bandara', 'amal.bandara@email.com',  'senior, coordinator', 'M', 'MUL'),
+('LEC008','Amith','Pussalla','amith23alla@email.com','senior,coordinator','M','ET');
+
+

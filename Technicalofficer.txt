@@ -1,0 +1,21 @@
+CREATE TABLE TECHNICAL_OFFICER (
+    Tec_id CHAR(6) NOT NULL,
+    F_name VARCHAR(40) NOT NULL,
+    L_name VARCHAR(40) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Gender CHAR(1),
+    Department_name VARCHAR(3),
+    Work_Area VARCHAR(100),
+    PRIMARY KEY(Tec_id)
+);
+
+INSERT INTO TECHNICAL_OFFICER 
+(Tec_id, F_name, L_name, Email, Gender, Department_name, Work_Area) 
+VALUES
+('TEC001', 'Chamod', 'Perera', 'Chamodtec001@gmail.com', 'M', 'ICT', 'ICT Lab 12'),
+('TEC002', 'Nimali', 'Silva', 'nimalisilva@email.com', 'F', 'ICT', 'ICT Lab 08'),
+('TEC003', 'Sampath', 'Fernando', 'sampath5fernando@email.com',  'M', 'ICT', 'ICT New Lab'),
+('TEC004', 'Kushani', 'Ratnayake', 'kushani0ratnayake@email.com', 'F', 'ICT', 'Hardware Lab'),
+('TEC005', 'Dilshan', 'Wickramasinghe', 'dilshanwick@email.com',  'M', 'ICT', 'Server Room'),
+('TEC006', 'Anusha', 'Jayawardena', 'anushajaya@email.com',  'F', 'ICT', ' Lab 11'),
+('TEC007', 'Lakmal', 'Peris', 'lakalperis@email.com',  'M', 'ICT', 'Network Operations Center');
