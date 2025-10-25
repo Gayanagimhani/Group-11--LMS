@@ -17,3 +17,68 @@ CREATE TABLE FINAL_ATTENDANCE (
 	ON DELETE CASCADE 
 	ON UPDATE CASCADE
 );
+
+--UPDATE  FINAL_ATTENDANCE TABLE
+
+DELIMITER //
+
+CREATE PROCEDURE Update_FINAL_ATTENDANCE()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE v_Reg_no VARCHAR(13);
+    DECLARE v_Course_id VARCHAR(8);
+    DECLARE v_TotalDays INT;
+    DECLARE v_Attended INT;
+    DECLARE v_Medicals INT;
+    DECLARE v_Percentage DECIMAL(5,2);
+    DECLARE v_Eligibility VARCHAR(15);
+
+    DECLARE cur CURSOR FOR
+        SELECT DISTINCT Reg_no, Course_id FROM ATTENDANCE;
+
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+
+    DELETE FROM ALL_ATTENDANCE;
+
+    OPEN cur;
+    FETCH cur INTO v_Reg_no, v_Course_id;
+
+    WHILE done = 0 DO
+        -- Calculate summary for each student & course
+        SELECT COUNT(*) INTO v_TotalDays
+        FROM ATTENDANCE
+        WHERE Reg_no = v_Reg_no AND Course_id = v_Course_id;
+
+        SELECT COUNT(*) INTO v_Attended
+        FROM ATTENDANCE
+        WHERE Reg_no = v_Reg_no AND Course_id = v_Course_id
+              AND Attendance_status = 'Present';
+
+        SELECT COUNT(*) INTO v_Medicals
+        FROM ATTENDANCE
+        WHERE Reg_no = v_Reg_no AND Course_id = v_Course_id
+              AND Medical_approved = 'Yes';
+
+        SET v_Percentage = ROUND(((v_Attended + v_Medicals) / v_TotalDays) * 100, 2);
+
+        IF v_Percentage >= 80 THEN
+            SET v_Eligibility = 'Eligible';
+        ELSE
+            SET v_Eligibility = 'Not Eligible';
+        END IF;
+
+        INSERT INTO FINAL_ATTENDANCE
+        VALUES (v_Reg_no, v_Course_id, v_TotalDays, v_Attended, v_Medicals, v_Percentage, v_Eligibility);
+
+        -- Fetch next record
+        FETCH cur INTO v_Reg_no, v_Course_id;
+    END WHILE;
+
+    CLOSE cur;
+END //
+
+DELIMITER ;
+
+--CALL PROCEDURE Update_FINAL_ATTENDANCE()
+
+CALL Update_FINAL_ATTENDANCE();
