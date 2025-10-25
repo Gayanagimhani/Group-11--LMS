@@ -20,15 +20,6 @@ VALUES
 ('LEC008','Amith','Pussalla','amith23alla@email.com','senior,coordinator','M','ET');
 
 
-CREATE TABLE DEAN (
-    Lec_id CHAR(6) PRIMARY KEY,
-    Start_date DATE NOT NULL,
-    End_date DATE,
-    Dean_specialty VARCHAR(100),
-    Office_location VARCHAR(100),
-    FOREIGN KEY (Lec_id) REFERENCES LECTURERE(Lec_id) ON DELETE CASCADE
-);
-
 INSERT INTO DEAN (Lec_id, Start_date, End_date, Dean_specialty, Office_location) 
 VALUES
 ('LEC001', '2022-01-01', '2025-12-31', 'Academic Affairs', 'ICT Building - Room 101'),
