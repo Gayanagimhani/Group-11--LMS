@@ -1,0 +1,7 @@
+CREATE TABLE LECTURE_CONTACT (
+    Lec_id CHAR(6),
+    Contact CHAR(10),
+    Contact_type VARCHAR(20) DEFAULT 'Mobile',
+    PRIMARY KEY (Lec_id,Contact),
+    FOREIGN KEY (Lec_id) REFERENCES LECTURE(Lec_id) ON DELETE CASCADE
+);
