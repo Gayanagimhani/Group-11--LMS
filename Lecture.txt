@@ -1,4 +1,4 @@
-CREATE TABLE LECTURE (
+CREATE TABLE LECTURERE (
     Lec_id CHAR(6) PRIMARY KEY,
     F_name VARCHAR(40) NOT NULL,
     L_name VARCHAR(40) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE LECTURE (
     Dep_name VARCHAR(3)
 );
 
-INSERT INTO LECTURE (Lec_id, F_name, L_name, Email, Role, Gender, Dep_name)
+INSERT INTO LECTURERE (Lec_id, F_name, L_name, Email, Role, Gender, Dep_name)
 VALUES
 ('LEC001', 'Nuwan', 'Laksiri', 'NuwanLaksiri001@gmail.com',  'senior, seniorlec', 'M', 'ICT'),
 ('LEC002', 'Kamala', 'Perera', 'kamala.perera@email.com',  'head, professor', 'F', 'ICT'),
