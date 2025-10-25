@@ -1,0 +1,84 @@
+--View: Attendance Details by Course Code
+
+CREATE OR REPLACE VIEW V_Attendance_By_Course AS
+SELECT 
+    at.Course_id,
+    at.Reg_no,
+    at.Date,
+    at.Attendance_status,
+    a.Percentage,
+    a.Eligibility
+FROM ATTENDANCE at
+JOIN ALL_ATTENDANCE a
+    ON at.Reg_no = a.Reg_no
+    AND at.Course_id = a.Course_id;
+
+SELECT * 
+FROM V_Attendance_By_Course
+WHERE Course_id = 'ICT1253'
+ORDER BY Reg_no, Date;
+
+--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--View: Attendance Summary for All Subjects
+
+CREATE OR REPLACE VIEW V_All_Subjects_Attendance_Summary AS
+SELECT 
+    a.Course_id,
+    c.Course_name,
+    ROUND(AVG(a.Percentage), 2) AS Average_Percentage,
+    SUM(CASE WHEN a.Eligibility = 'Eligible' THEN 1 ELSE 0 END) AS Eligible_Students,
+    SUM(CASE WHEN a.Eligibility = 'Not Eligible' THEN 1 ELSE 0 END) AS Not_Eligible_Students
+FROM ALL_ATTENDANCE a
+JOIN COURSE_UNIT c
+    ON a.Course_id = c.Course_id
+GROUP BY a.Course_id, c.Course_name
+ORDER BY a.Course_id;
+
+SELECT * FROM V_All_Subjects_Attendance_Summary;
+
+--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--View:Student Attendance Summary (All Subjects)
+
+CREATE OR REPLACE VIEW V_Student_Attendance_Summary AS
+SELECT 
+    a.Reg_no,
+    c.Course_id,
+    c.Course_name,
+    a.Number_of_days_held,
+    a.Number_of_days_attended,
+    a.Number_of_medicals,
+    a.Percentage,
+    a.Eligibility
+FROM ALL_ATTENDANCE a
+JOIN COURSE_UNIT c 
+    ON a.Course_id = c.Course_id;
+
+SELECT * 
+FROM V_Student_Attendance_Summary
+WHERE Reg_no = 'TG/2023/1707'
+ORDER BY Course_id;
+
+--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--View:Student Attendance Details (Specific Subject)
+
+CREATE OR REPLACE VIEW V_Student_Attendance_By_Subject AS
+SELECT 
+    at.Reg_no,
+    at.Course_id,
+    c.Course_name,
+    at.Date,
+    at.Session_type,
+    at.Attendance_status,
+    a.Percentage,
+    a.Eligibility
+FROM ATTENDANCE at
+JOIN ALL_ATTENDANCE a 
+    ON at.Reg_no = a.Reg_no AND at.Course_id = a.Course_id
+JOIN COURSE_UNIT c 
+    ON at.Course_id = c.Course_id;
+
+SELECT * 
+FROM V_Student_Attendance_By_Subject
+WHERE Reg_no = 'TG/2023/1707' AND Course_id = 'ICT1233'
+ORDER BY Date;
+
