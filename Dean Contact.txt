@@ -1,7 +1,22 @@
-CREATE TABLE LECTURE_CONTACT (
+CREATE TABLE DEAN_CONTACT (
     Lec_id CHAR(6),
     Contact CHAR(10),
     Contact_type VARCHAR(20) DEFAULT 'Mobile',
     PRIMARY KEY (Lec_id,Contact),
     FOREIGN KEY (Lec_id) REFERENCES LECTURE(Lec_id) ON DELETE CASCADE
 );
+
+INSERT INTO DEAN_CONTACT (Lec_id, Contact, Contact_type) 
+VALUES
+
+('LEC001', '0711122334', 'Mobile'),
+('LEC001', '0112233445', 'Office'),
+('LEC001', '0779988776', 'WhatsApp'),
+
+('LEC002', '0723344556', 'Mobile'),
+('LEC002', '0113344556', 'Office'),
+
+('LEC005', '0756677889', 'Mobile'),
+('LEC005', '0116677889', 'Office');
+
+
