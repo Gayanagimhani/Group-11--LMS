@@ -1,0 +1,9 @@
+CREATE TABLE DEAN (
+    Lec_id CHAR(6) PRIMARY KEY,
+    Start_date DATE NOT NULL,
+    End_date DATE,
+    Dean_specialty VARCHAR(100),
+    Office_location VARCHAR(100),
+    FOREIGN KEY (Lec_id) REFERENCES LECTURERE(Lec_id) ON DELETE CASCADE
+);
+
