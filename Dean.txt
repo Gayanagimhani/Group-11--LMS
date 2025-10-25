@@ -1,16 +1,19 @@
 CREATE TABLE DEAN (
     Lec_id CHAR(6) PRIMARY KEY,
+    F_name VARCHAR(40) NOT NULL,
+    L_name VARCHAR(40) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Role VARCHAR(50),
+    Gender CHAR(1),
+    Dep_name VARCHAR(3)
     Start_date DATE NOT NULL,
     End_date DATE,
-    Dean_specialty VARCHAR(100),
-    Office_location VARCHAR(100),
+    
     FOREIGN KEY (Lec_id) REFERENCES LECTURERE(Lec_id) ON DELETE CASCADE
 );
 
 --insert data
 
-INSERT INTO DEAN (Lec_id, Start_date, End_date) 
+INSERT INTO DEAN (Lec_id, F_name, L_name, Email, Role, Gender, Dep_name, Start_date, End_date) 
 VALUES
-('LEC001', '2022-01-01', '2025-12-31'),
-('LEC002', '2021-06-01', '2024-05-31'),
-('LEC005', '2023-03-15', '2026-03-14');
+('LEC001','Nuwan', 'Laksiri', 'NuwanLaksiri001@gmail.com',  'senior, seniorlec', 'M', 'ICT', '2022-01-01', '2025-12-31');
