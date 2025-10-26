@@ -1,0 +1,26 @@
+CREATE TABLE COURSE_UNIT (
+Course_id char(7) NOT NULL,
+Course_name varchar(255),
+Type ENUM('Theory','Practical','Both') NOT NULL,
+Course_credit INT NOT NULL,
+Year ENUM('1st','2nd','3rd','4th') NOT NULL,
+Semester ENUM('I semester','II semester','III semester') NOT NULL,
+Department varchar(3),
+Hours INT NOT NULL,
+Lec_id char(6),
+PRIMARY KEY(Course_id),
+FOREIGN KEY (Lec_id) REFERENCES LECTURERE (Lec_id) ON DELETE CASCADE);
+
+
+INSERT INTO COURSE_UNIT 
+(Course_id, Course_name, Type, Course_credit, Year, Semester, Department, Lec_id, Hours)
+VALUES 
+('ICT1212', 'Database Management Systems', 'Theory', 2, '1st', 'II semester', 'ICT', 'LEC001', 30),
+('ICT1233', 'Server-side Web Deveopment', 'Both', 3, '1st', 'II semester', 'ICT', 'LEC002', 60),
+('ICT1253', 'Computer Network', 'Both', 3, '1st', 'II semester', 'ICT','LEC003', 60),
+('ICT1222', 'Database Management System Practicum', 'practical', 2, '1st', 'II semester', 'ICT','LEC004',60 ),
+('ICT1242', 'Computer architecture', 'Theory', 2, '1st', 'II semester', 'ICT','LEC005', 30),
+('ENG1222', 'English II', 'Theory', 2, '1st', 'II semester', 'DMS', 'LEC006', 30),
+('TCS1212', 'Fundamentals of Management', 'Theory', 2, '1st', 'II semester', 'ICT','LEC007', 30),
+('TMS1233', 'Discrete Mathematics', 'Theory', 3, '1st', 'II semester', 'ICT','LEC008', 45);
+
