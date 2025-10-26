@@ -1,0 +1,108 @@
+-- View - CA_Individual_By_Course
+
+CREATE OR REPLACE VIEW CA_Individual_By_Course AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    c.Course_id,
+    cu.Course_name,
+    t.CA_marks
+FROM STUDENT AS s
+JOIN (
+    SELECT Reg_no, Course_id, CA_marks FROM DATABASE_MANAGEMENT_SYSTEM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM DBMS_PRACTICUM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM SERVER_SIDE_WEB
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM COMPUTER_ARCHITECTURE
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM COMPUTER_NETWORK
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM ENGLISH
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM FUNDAMENTALS_MANAGEMENT
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM DISCRETE_MATHEMATICS
+) AS t ON s.Reg_no = t.Reg_no
+JOIN COURSE_UNIT AS cu ON cu.Course_id = t.Course_id
+JOIN COURSE_UNIT AS c ON cu.Course_id = c.Course_id;
+
+-- for use
+
+SELECT * 
+FROM CA_Individual_By_Course
+WHERE Reg_no = 'TG/2023/1701' AND Course_id = 'ICT1212';
+
+
+-- View - CA_Individual_Summary
+
+CREATE OR REPLACE VIEW CA_Individual_Summary AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    t.Course_id,
+    cu.Course_name,
+    t.CA_marks
+FROM STUDENT AS s
+JOIN (
+    SELECT Reg_no, Course_id, CA_marks FROM DATABASE_MANAGEMENT_SYSTEM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM DBMS_PRACTICUM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM SERVER_SIDE_WEB
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM COMPUTER_ARCHITECTURE
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM COMPUTER_NETWORK
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM ENGLISH
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM FUNDAMENTALS_MANAGEMENT
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM DISCRETE_MATHEMATICS
+) AS t ON s.Reg_no = t.Reg_no
+JOIN COURSE_UNIT AS cu ON cu.Course_id = t.Course_id
+ORDER BY s.Reg_no, t.Course_id;
+
+-- for use
+
+SELECT * 
+FROM CA_Individual_Summary
+WHERE Reg_no = 'TG/2023/1701';
+
+-- View - CA_Batch_Summary_By_Course
+
+CREATE OR REPLACE VIEW CA_Batch_Summary_By_Course AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    t.Course_id,
+    cu.Course_name,
+    t.CA_marks
+FROM STUDENT AS s
+JOIN (
+    SELECT Reg_no, Course_id, CA_marks FROM DATABASE_MANAGEMENT_SYSTEM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM DBMS_PRACTICUM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM SERVER_SIDE_WEB
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM COMPUTER_ARCHITECTURE
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM COMPUTER_NETWORK
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM ENGLISH
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM FUNDAMENTALS_MANAGEMENT
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM DISCRETE_MATHEMATICS
+) AS t ON s.Reg_no = t.Reg_no
+JOIN COURSE_UNIT AS cu ON cu.Course_id = t.Course_id
+ORDER BY t.Course_id, s.Reg_no;
+
+-- for use
+
+SELECT * 
+FROM CA_Batch_Summary_By_Course
+WHERE Course_id = 'ICT1233';
