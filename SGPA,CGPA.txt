@@ -181,3 +181,91 @@ DELIMITER ;
 -- CALL PROCUDERCES
  
 call Student_GPA_Report('TG/2023/1705');
+
+
+
+
+DELIMITER //
+
+CREATE PROCEDURE Batch_GPA_Report()
+BEGIN
+    -- Combine all subjects into one unified mark/grade set
+    WITH all_subjects AS (
+        SELECT Reg_no, Grade, 2 AS Credit FROM DATABASE_MANAGEMENT_SYSTEM WHERE Grade IS NOT NULL
+        UNION ALL
+        SELECT Reg_no, Grade, 2 AS Credit FROM DBMS_PRACTICUM WHERE Grade IS NOT NULL
+        UNION ALL
+        SELECT Reg_no, Grade, 3 AS Credit FROM SERVER_SIDE_WEB WHERE Grade IS NOT NULL
+        UNION ALL
+        SELECT Reg_no, Grade, 2 AS Credit FROM COMPUTER_ARCHITECTURE WHERE Grade IS NOT NULL
+        UNION ALL
+        SELECT Reg_no, Grade, 3 AS Credit FROM COMPUTER_NETWORK WHERE Grade IS NOT NULL
+        UNION ALL
+        SELECT Reg_no, Grade, 2 AS Credit FROM FUNDAMENTALS_MANAGEMENT WHERE Grade IS NOT NULL
+        UNION ALL
+        SELECT Reg_no, Grade, 3 AS Credit FROM DISCRETE_MATHEMATICS WHERE Grade IS NOT NULL
+        UNION ALL
+        SELECT Reg_no, Grade, 2 AS Credit FROM ENGLISH WHERE Grade IS NOT NULL
+    )
+
+    -- Calculate SGPA and CGPA for each student
+    SELECT 
+        a.Reg_no,
+        ROUND(
+            SUM(
+                CASE
+                    WHEN Grade = 'A+' THEN 4.00 * Credit
+                    WHEN Grade = 'A'  THEN 4.00 * Credit
+                    WHEN Grade = 'A-' THEN 3.70 * Credit
+                    WHEN Grade = 'B+' THEN 3.30 * Credit
+                    WHEN Grade = 'B'  THEN 3.00 * Credit
+                    WHEN Grade = 'B-' THEN 2.70 * Credit
+                    WHEN Grade = 'C+' THEN 2.30 * Credit
+                    WHEN Grade = 'C'  THEN 2.00 * Credit
+                    WHEN Grade = 'C-' THEN 1.70 * Credit
+                    WHEN Grade = 'D'  THEN 1.30 * Credit
+                    WHEN Grade IN ('E','E(CA)','E(ESA)','E(CA& ESA)') THEN 0.00
+                    ELSE 0
+                END
+            ) /
+            NULLIF(SUM(
+                CASE 
+                    WHEN Grade IN ('W', 'N', 'WH', 'MC') THEN 0
+                    ELSE Credit
+                END
+            ), 0), 
+        2) AS SGPA,
+        ROUND(
+            SUM(
+                CASE
+                    WHEN Grade = 'A+' THEN 4.00 * Credit
+                    WHEN Grade = 'A'  THEN 4.00 * Credit
+                    WHEN Grade = 'A-' THEN 3.70 * Credit
+                    WHEN Grade = 'B+' THEN 3.30 * Credit
+                    WHEN Grade = 'B'  THEN 3.00 * Credit
+                    WHEN Grade = 'B-' THEN 2.70 * Credit
+                    WHEN Grade = 'C+' THEN 2.30 * Credit
+                    WHEN Grade = 'C'  THEN 2.00 * Credit
+                    WHEN Grade = 'C-' THEN 1.70 * Credit
+                    WHEN Grade = 'D'  THEN 1.30 * Credit
+                    WHEN Grade IN ('E','E(CA)','E(ESA)','E(CA& ESA)') THEN 0.00
+                    ELSE 0
+                END
+            ) /
+            NULLIF(SUM(
+                CASE 
+                    WHEN Grade IN ('W', 'N', 'WH', 'MC') THEN 0
+                    ELSE Credit
+                END
+            ), 0),
+        2) AS CGPA
+    FROM all_subjects a
+    GROUP BY a.Reg_no
+    ORDER BY a.Reg_no;
+
+END //
+
+DELIMITER ;
+
+
+CALL Batch_GPA_Report();
