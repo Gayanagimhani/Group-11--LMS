@@ -1,4 +1,4 @@
----CREATE TABLE ATTENDENCE---
+-- CREATE TABLE ATTENDENCE
 
 CREATE TABLE ATTENDANCE (
     Reg_no CHAR(12) NOT NULL,
@@ -16,10 +16,10 @@ CREATE TABLE ATTENDANCE (
         ON UPDATE CASCADE
 );
 
----INSERT DATA INTO ATTENDENCE TABLE---
+-- INSERT DATA INTO ATTENDENCE TABLE
 
---WEEK 1 (2025-02-03 to 2025-02-07)
---MONDAY
+-- WEEK 1 (2025-02-03 to 2025-02-07)
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date, Session_type, Attendance_status, Medical_approved)
@@ -35,7 +35,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-02-03','Theory','Present','No'),
 ('TG/2023/1710','ICT1233','2025-02-03','Theory','Present','No');
 
---TUESDAY
+-- TUESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -62,7 +62,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-02-04','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-02-04','Theory','Present','No');
 
---WEDNESDAY
+-- WEDNESDAY
 
 INSERT INTO ATTENDANCE 
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved) 
@@ -78,7 +78,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-02-05','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-02-05','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
  (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved) 
@@ -107,7 +107,7 @@ VALUES
 
 -- ICT1222 (Practical - both sessions treated as one attendance entry)
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE 
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved) 
@@ -134,8 +134,8 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-02-07','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-02-07','Theory','Present','No');
 
---WEEK 2 (2025-02-10 to 2025-02-14)
---MONDAY
+-- WEEK 2 (2025-02-10 to 2025-02-14)
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -151,7 +151,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-02-10','Practical','Present','No'),
 ('TG/2023/1710','ICT1233','2025-02-10','Practical','Present','No');
 
---TUESDAY
+-- TUESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -178,7 +178,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-02-11','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-02-11','Theory','Present','No');
 
---WEDNESDAY
+-- WEDNESDAY
 
 INSERT INTO ATTENDANCE
  (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -194,7 +194,7 @@ INSERT INTO ATTENDANCE
 ('TG/2023/1709','TMS1233','2025-02-12','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-02-12','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
  (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -221,7 +221,7 @@ INSERT INTO ATTENDANCE
 ('TG/2023/1709','ICT1222','2025-02-13','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-02-13','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved) 
@@ -248,8 +248,8 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-02-14','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-02-14','Theory','Present','No');
 
---WEEK 3 (2025-02-17 to 2025-02-21)
---MONDAY
+-- WEEK 3 (2025-02-17 to 2025-02-21)
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -265,7 +265,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-02-17','Theory','Present','No'),
 ('TG/2023/1710','ICT1233','2025-02-17','Theory','Present','No');
 
---TUESDAY
+-- TUESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -292,7 +292,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-02-18','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-02-18','Theory','Present','No');
 
---WEDNESDAY
+-- WEDNESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -308,7 +308,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-02-19','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-02-19','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
  (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -335,7 +335,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-02-20','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-02-20','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -362,8 +362,8 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-02-21','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-02-21','Theory','Absent','Yes');
 
---WEEK 4 (2025-02-24 to 2025-02-28)
---MONDAY-Lecture
+-- WEEK 4 (2025-02-24 to 2025-02-28)
+-- MONDAY-Lecture
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved) 
@@ -379,7 +379,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-02-24','Practical','Present','No'),
 ('TG/2023/1710','ICT1233','2025-02-24','Practical','Present','No');
 
---TUESDAY
+-- TUESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -406,7 +406,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-02-25','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-02-25','Theory','Present','No');
 
---WEDNESDAY-Lecture
+-- WEDNESDAY-Lecture
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -422,7 +422,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-02-26','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-02-26','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -449,8 +449,8 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-02-27','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-02-27','Practical','Present','No');
 
---FRIDAY
---TCS1212 Lecture
+-- FRIDAY
+-- TCS1212 Lecture
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -477,9 +477,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-02-28','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-02-28','Theory','Absent','No');
 
---WEEK 5 (2025-03-03 to 2025-03-07)
+-- WEEK 5 (2025-03-03 to 2025-03-07)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -495,9 +495,9 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-03-03','Theory','Present','No'),
 ('TG/2023/1710','ICT1233','2025-03-03','Theory','Present','No');
 
---TUESDAY
+-- TUESDAY
 
---ICT1253-Lecture
+-- ICT1253-Lecture
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -524,7 +524,7 @@ VALUES
 ('TG/2023/1710','ICT1242','2025-03-04','Theory','Present','No');
 
 
---WEDNESDAY
+-- WEDNESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -540,7 +540,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-03-05','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-03-05','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -570,7 +570,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-03-06','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-03-06','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -597,9 +597,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-03-07','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-03-07','Theory','Absent','No');
 
- --WEEK 6 (2025-03-10 to 2025-03-14)
+ -- WEEK 6 (2025-03-10 to 2025-03-14)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date, Session_type, Attendance_status, Medical_approved)
@@ -615,7 +615,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-03-10','Practical','Present','No'),
 ('TG/2023/1710','ICT1233','2025-03-10','Practical','Present','No');
 
---TUESDAY
+-- TUESDAY
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUE
@@ -641,7 +641,7 @@ VALUE
 ('TG/2023/1709','ICT1242','2025-03-11','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-03-11','Theory','Present','No');
 
---WEDNESDAY
+-- WEDNESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -657,7 +657,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-03-12','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-03-12','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -684,7 +684,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-03-13','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-03-13','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -710,9 +710,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-03-14','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-03-14','Theory','Absent','Yes');
 
---WEEK 7 (2025-03-17 to 2025-03-21)
+-- WEEK 7 (2025-03-17 to 2025-03-21)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -729,7 +729,7 @@ VALUES
 ('TG/2023/1710','ICT1233','2025-03-17','Theory','Present','No');
 
 
---TUESDAY 
+-- TUESDAY 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -755,7 +755,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-03-18','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-03-18','Theory','Present','No');
 
---WEDNESDAY 
+-- WEDNESDAY 
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -771,7 +771,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-03-19','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-03-19','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE 
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved) 
@@ -798,9 +798,9 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-03-20','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-03-20','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
---TCS1212-Lecture
+-- TCS1212-Lecture
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -827,7 +827,7 @@ INSERT INTO ATTENDANCE (Reg_no, Course_id, Date,  Session_type, Attendance_statu
 ('TG/2023/1709','ENG1222','2025-03-21','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-03-21','Theory','Absent','No');
 
---WEEK 8 (2025-03-24 to 2025-03-28)
+-- WEEK 8 (2025-03-24 to 2025-03-28)
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -843,9 +843,9 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-03-24','Practical','Present','No'),
 ('TG/2023/1710','ICT1233','2025-03-24','Practical','Present','No');
 
---TUESDAY 
+-- TUESDAY 
 
---ICT1253 -Lecture
+-- ICT1253 -Lecture
 INSERT INTO ATTENDANCE 
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved) 
 VALUES
@@ -871,7 +871,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-03-25','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-03-25','Theory','Present','No');
 
---WEDNESDAY
+-- WEDNESDAY
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -886,9 +886,9 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-03-26','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-03-26','Theory','Present','No');
 
---THURSDAY 
+-- THURSDAY 
 
---ICT1212 Lecture
+-- ICT1212 Lecture
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -903,7 +903,7 @@ VALUES
 ('TG/2023/1709','ICT1212','2025-03-27','Theory','Present','No'),
 ('TG/2023/1710','ICT1212','2025-03-27','Theory','Present','No');
 
---ICT1222 Practical
+-- ICT1222 Practical
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -918,7 +918,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-03-27','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-03-27','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -944,9 +944,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-03-28','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-03-28','Theory','Absent','No');
 
---WEEK 9(2025-03-31 to 2025-04-04)
+-- WEEK 9(2025-03-31 to 2025-04-04)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -962,7 +962,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-03-31','Theory','Present','No'),
 ('TG/2023/1710','ICT1233','2025-03-31','Theory','Present','No');
 
---TUESDAY
+-- TUESDAY
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -988,7 +988,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-03-25','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-03-25','Theory','Present','No');
 
---WEDNESDAY
+-- WEDNESDAY
 
 INSERT INTO ATTENDANCE 
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1004,7 +1004,7 @@ INSERT INTO ATTENDANCE
 ('TG/2023/1709','TMS1233','2025-04-02','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-04-02','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
  (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1031,7 +1031,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-04-03','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-04-03','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1058,9 +1058,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-04-04','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-04-04','Theory','Present','No');
 
-WEEK 10 (2025-04-07 to 2025-04-11)
+-- WEEK 10 (2025-04-07 to 2025-04-11)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1103,7 +1103,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-04-08','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-04-08','Theory','Present','No');
 
---WEDNESDAY
+-- WEDNESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1119,7 +1119,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-04-09','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-04-09','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1146,7 +1146,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-04-10','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-04-10','Practical','Present','No');
 
---FRIDAY 
+-- FRIDAY 
 
 INSERT INTO ATTENDANCE 
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1173,9 +1173,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-04-11','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-04-11','Theory','Present','No');
 
---WEEK 11 (2025-04-14 to 2025-04-18)
+-- WEEK 11 (2025-04-14 to 2025-04-18)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1191,7 +1191,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-04-21','Theory','Present','No'),
 ('TG/2023/1710','ICT1233','2025-04-21','Theory','Present','No');
 
---TUESDAY
+-- TUESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1234,7 +1234,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-04-23','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-04-23','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1261,7 +1261,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-04-24','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-04-24','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1287,9 +1287,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-04-25','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-04-25','Theory','Present','No');
 
---WEEK 12 (2025-04-21 to 2025-04-25)
+-- WEEK 12 (2025-04-21 to 2025-04-25)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1305,7 +1305,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-04-21','Practical','Present','No'),
 ('TG/2023/1710','ICT1233','2025-04-21','Practical','Present','No');
 
---TUESDAY
+-- TUESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1348,7 +1348,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-04-23','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-04-23','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1375,7 +1375,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-04-24','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-04-24','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1403,7 +1403,7 @@ VALUES
 
 -- WEEK 13 (2025-04-28 to 2025-05-02)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1419,7 +1419,7 @@ VALUES
 ('TG/2023/1710','ICT1233','2025-04-28','Theory','Present','No');
 
 
---TUESDAY
+-- TUESDAY
 
 INSERT INTO ATTENDANCE (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1460,7 +1460,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-04-30','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-04-30','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1487,7 +1487,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-05-01','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-05-01','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1514,9 +1514,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-05-02','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-05-02','Theory','Present','No');
 
---WEEK 14 (2025-05-05 to 2025-05-09)
+-- WEEK 14 (2025-05-05 to 2025-05-09)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1532,7 +1532,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-05-05','Practical','Present','No'),
 ('TG/2023/1710','ICT1233','2025-05-05','Practical','Present','No');
 
---TUESDAY
+-- TUESDAY
 
 INSERT INTO ATTENDANCE (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1575,7 +1575,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-05-06','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-05-06','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1602,7 +1602,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-05-07','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-05-07','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 
 INSERT INTO ATTENDANCE (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1628,9 +1628,9 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-05-08','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-05-08','Theory','Present','No');
 
---WEEK 15 (2025-05-12 to 2025-05-16)
+-- WEEK 15 (2025-05-12 to 2025-05-16)
 
---MONDAY
+-- MONDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1646,7 +1646,7 @@ VALUES
 ('TG/2023/1709','ICT1233','2025-05-12','Theory','Present','No'),
 ('TG/2023/1710','ICT1233','2025-05-12','Theory','Present','No');
 
---TUESDAY
+-- TUESDAY
 INSERT INTO ATTENDANCE (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
 ('TG/2023/1701','ICT1253','2025-05-13','Theory','Present','No'),
@@ -1671,7 +1671,7 @@ VALUES
 ('TG/2023/1709','ICT1242','2025-05-13','Theory','Present','No'),
 ('TG/2023/1710','ICT1242','2025-05-13','Theory','Present','No');
 
---WEDNESDAY
+-- WEDNESDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1687,7 +1687,7 @@ VALUES
 ('TG/2023/1709','TMS1233','2025-05-14','Theory','Present','No'),
 ('TG/2023/1710','TMS1233','2025-05-14','Theory','Present','No');
 
---THURSDAY
+-- THURSDAY
 
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
@@ -1714,7 +1714,7 @@ VALUES
 ('TG/2023/1709','ICT1222','2025-05-15','Practical','Present','No'),
 ('TG/2023/1710','ICT1222','2025-05-15','Practical','Present','No');
 
---FRIDAY
+-- FRIDAY
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
