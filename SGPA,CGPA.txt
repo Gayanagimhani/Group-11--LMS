@@ -180,4 +180,4 @@ DELIMITER ;
 
 -- CALL PROCUDERCES
  
-call Student_GPA_Report('student reg_no');
+call Student_GPA_Report('TG/2023/1705');
