@@ -1,0 +1,129 @@
+-- View - Final_Marks_Individual
+
+CREATE OR REPLACE VIEW Final_Marks_Individual AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    t.Course_id,
+    cu.Course_name,
+    t.CA_marks,
+    t.Final_marks,
+    t.Grade,
+    t.Description
+FROM STUDENT AS s
+JOIN (
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM DATABASE_MANAGEMENT_SYSTEM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM DBMS_PRACTICUM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM SERVER_SIDE_WEB
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM COMPUTER_ARCHITECTURE
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM COMPUTER_NETWORK
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM ENGLISH
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM FUNDAMENTALS_MANAGEMENT
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM DISCRETE_MATHEMATICS
+) AS t ON s.Reg_no = t.Reg_no
+JOIN COURSE_UNIT AS cu ON cu.Course_id = t.Course_id
+ORDER BY s.Reg_no, t.Course_id;
+
+-- for use
+
+SELECT * 
+FROM Final_Marks_Individual
+WHERE Reg_no = 'TG/2023/1701';
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- View - Final_Marks_Batch_By_Course
+
+CREATE OR REPLACE VIEW Final_Marks_Batch_By_Course AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    t.Course_id,
+    cu.Course_name,
+    t.CA_marks,
+    t.Final_marks,
+    t.Grade,
+    t.Description
+FROM STUDENT AS s
+JOIN (
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM DATABASE_MANAGEMENT_SYSTEM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM DBMS_PRACTICUM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM SERVER_SIDE_WEB
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM COMPUTER_ARCHITECTURE
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM COMPUTER_NETWORK
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM ENGLISH
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM FUNDAMENTALS_MANAGEMENT
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks, Final_marks, Grade, Description FROM DISCRETE_MATHEMATICS
+) AS t ON s.Reg_no = t.Reg_no
+JOIN COURSE_UNIT AS cu ON cu.Course_id = t.Course_id
+ORDER BY t.Course_id, s.Reg_no;
+
+-- for use
+
+SELECT * 
+FROM Final_Marks_Batch_By_Course
+WHERE Course_id = 'ICT1212';
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- View - CA_marks_Eligibility_View
+
+CREATE OR REPLACE VIEW CA_marks_Eligibility_View AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    t.Course_id,
+    cu.Course_name,
+    t.CA_marks,
+    CASE
+        WHEN t.CA_marks >= 40 THEN 'Eligible'
+        ELSE 'Not Eligible'
+    END AS Eligibility,
+    CASE
+        WHEN t.CA_marks < 40 THEN 'CA_marks below 40% threshold'
+        ELSE 'Meets CA_marks requirement'
+    END AS Reason
+FROM STUDENT AS s
+JOIN (
+    SELECT Reg_no, Course_id, CA_marks FROM DATABASE_MANAGEMENT_SYSTEM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM DBMS_PRACTICUM
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM SERVER_SIDE_WEB
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM COMPUTER_ARCHITECTURE
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM COMPUTER_NETWORK
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM ENGLISH
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM FUNDAMENTALS_MANAGEMENT
+    UNION ALL
+    SELECT Reg_no, Course_id, CA_marks FROM DISCRETE_MATHEMATICS
+) AS t ON s.Reg_no = t.Reg_no
+JOIN COURSE_UNIT AS cu ON cu.Course_id = t.Course_id
+ORDER BY t.Course_id, s.Reg_no;
+
+-- for use
+-- To view all students’ eligibility:
+SELECT * FROM CA_marks_Eligibility_View;
+
+-- To check one specific student:
+SELECT * FROM CA_marks_Eligibility_View
+WHERE Reg_no = 'TG/2023/1701';
+
+-- To check one specific subject:
+SELECT * FROM CA_marks_Eligibility_View
+WHERE Course_id = 'ICT1212';
