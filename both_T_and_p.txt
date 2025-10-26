@@ -1,4 +1,4 @@
---Theory Attendance Only
+-- Theory Attendance Only
 
 CREATE OR REPLACE VIEW V_Theory_Attendance AS
 SELECT 
@@ -22,8 +22,8 @@ GROUP BY a.Reg_no, at.Course_id, c.Course_name;
 SELECT * FROM V_Theory_Attendance
 WHERE Course_id = 'ICT1233';
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
---Practical Attendance Only
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- Practical Attendance Only
 
 CREATE OR REPLACE VIEW V_Practical_Attendance AS
 SELECT 
@@ -45,5 +45,4 @@ GROUP BY a.Reg_no, at.Course_id, c.Course_name;
 SELECT * FROM V_Practical_Attendance
 WHERE Course_id = 'ICT1233';
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
---
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
