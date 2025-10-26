@@ -1,4 +1,4 @@
---View: Attendance Details by Course Code
+-- View: Attendance Details by Course Code
 
 CREATE OR REPLACE VIEW V_Attendance_By_Course AS
 SELECT 
@@ -18,8 +18,8 @@ FROM V_Attendance_By_Course
 WHERE Course_id = 'ICT1253'
 ORDER BY Reg_no, Date;
 
---+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
---View: Attendance Summary for All Subjects
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- View: Attendance Summary for All Subjects
 
 CREATE OR REPLACE VIEW V_All_Subjects_Attendance_Summary AS
 SELECT 
@@ -36,8 +36,8 @@ ORDER BY a.Course_id;
 
 SELECT * FROM V_All_Subjects_Attendance_Summary;
 
---+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
---View:Student Attendance Summary (All Subjects)
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- View:Student Attendance Summary (All Subjects)
 
 CREATE OR REPLACE VIEW V_Student_Attendance_Summary AS
 SELECT 
@@ -58,8 +58,8 @@ FROM V_Student_Attendance_Summary
 WHERE Reg_no = 'TG/2023/1707'
 ORDER BY Course_id;
 
---++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
---View:Student Attendance Details (Specific Subject)
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- View:Student Attendance Details (Specific Subject)
 
 CREATE OR REPLACE VIEW V_Student_Attendance_By_Subject AS
 SELECT 
