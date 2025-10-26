@@ -3,7 +3,7 @@ CREATE TABLE DEAN_CONTACT (
     Contact CHAR(10),
     Contact_type VARCHAR(20) DEFAULT 'Mobile',
     PRIMARY KEY (Lec_id,Contact),
-    FOREIGN KEY (Lec_id) REFERENCES LECTURE(Lec_id) ON DELETE CASCADE
+    FOREIGN KEY (Lec_id) REFERENCES LECTURERE(Lec_id) ON DELETE CASCADE
 );
 
 INSERT INTO DEAN_CONTACT (Lec_id, Contact, Contact_type) 
