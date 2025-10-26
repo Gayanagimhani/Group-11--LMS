@@ -1,0 +1,88 @@
+DELIMITER //
+
+CREATE PROCEDURE Update_Grades(IN table_name VARCHAR(50))
+BEGIN
+    -- Build and execute in one go
+    SET @sql = CONCAT('UPDATE ', table_name, ' c ',
+                      'LEFT JOIN student s ON c.Reg_no = s.Reg_no ',
+                      'LEFT JOIN final_attendance a ON c.Reg_no = a.Reg_no AND c.Course_id = a.Course_id ',
+                      'SET c.Grade = CASE ',
+                        -- Special status cases according to circular
+                        'WHEN LOWER(s.Status) = ''suspend'' THEN ''WH'' ',
+                        'WHEN c.Final_marks IS NULL THEN ''MC'' ',
+                        'WHEN a.Eligibility = ''Not Eligible'' THEN ''NE'' ',
+                        
+                        -- For repeat students - apply grading but with C as maximum possible grade
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks >= 50 THEN ''C'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks >= 45 THEN ''C'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks >= 40 THEN ''C-'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks >= 35 THEN ''D'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.CA_marks < 20 AND c.Final_marks < 35 THEN ''E(CA& ESA)'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.CA_marks < 20 THEN ''E(CA)'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks < 35 THEN ''E(ESA)'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' THEN ''E'' ',
+                        
+                        -- Regular grades for non-repeat students based on UGC Circular percentage ranges
+                        'WHEN c.Final_marks >= 85 THEN ''A+'' ',
+                        'WHEN c.Final_marks >= 75 THEN ''A'' ',
+                        'WHEN c.Final_marks >= 70 THEN ''A-'' ',
+                        'WHEN c.Final_marks >= 65 THEN ''B+'' ',
+                        'WHEN c.Final_marks >= 60 THEN ''B'' ',
+                        'WHEN c.Final_marks >= 55 THEN ''B-'' ',
+                        'WHEN c.Final_marks >= 50 THEN ''C+'' ',
+                        'WHEN c.Final_marks >= 45 THEN ''C'' ',
+                        'WHEN c.Final_marks >= 40 THEN ''C-'' ',
+                        'WHEN c.Final_marks >= 35 THEN ''D'' ',
+                        
+                        -- Failure cases with specific references for non-repeat students
+                        'WHEN c.CA_marks < 20 AND c.Final_marks < 35 THEN ''E(CA& ESA)'' ',
+                        'WHEN c.CA_marks < 20 THEN ''E(CA)'' ',
+                        'WHEN c.Final_marks < 35 THEN ''E(ESA)'' ',
+                        'ELSE ''E'' END, ',
+
+                      'c.Description = CASE ',
+                        -- Special status descriptions
+                        'WHEN LOWER(s.Status) = ''suspend'' THEN ''Withheld'' ',
+                        'WHEN c.Final_marks IS NULL THEN ''Medical'' ',
+                        'WHEN a.Eligibility = ''Not Eligible'' THEN ''Attendance Fail'' ',
+                        
+                        -- Descriptions for repeat students
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks >= 45 THEN ''Repeat Attempt (Max Grade C)'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks >= 40 THEN ''Repeat Attempt (Weak Pass)'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks >= 35 THEN ''Repeat Attempt (Conditional Pass)'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.CA_marks < 20 AND c.Final_marks < 35 THEN ''Repeat - CA and ESA Fail'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.CA_marks < 20 THEN ''Repeat - CA Fail'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' AND c.Final_marks < 35 THEN ''Repeat - ESA Fail'' ',
+                        'WHEN LOWER(s.Status) = ''repeat'' THEN ''Repeat - Fail'' ',
+                        
+                        -- Grade descriptions for non-repeat students according to UGC Circular
+                        'WHEN c.Final_marks >= 85 THEN ''Excellent'' ',
+                        'WHEN c.Final_marks >= 75 THEN ''Excellent'' ',
+                        'WHEN c.Final_marks >= 70 THEN ''Excellent'' ',
+                        'WHEN c.Final_marks >= 65 THEN ''Good'' ',
+                        'WHEN c.Final_marks >= 60 THEN ''Good'' ',
+                        'WHEN c.Final_marks >= 55 THEN ''Good'' ',
+                        'WHEN c.Final_marks >= 50 THEN ''Pass'' ',
+                        'WHEN c.Final_marks >= 45 THEN ''Pass'' ',
+                        'WHEN c.Final_marks >= 40 THEN ''Weak Pass'' ',
+                        'WHEN c.Final_marks >= 35 THEN ''Conditional Pass'' ',
+                        
+                        -- Failure descriptions for non-repeat students
+                        'WHEN c.CA_marks < 20 AND c.Final_marks < 35 THEN ''CA and ESA Fail'' ',
+                        'WHEN c.CA_marks < 20 THEN ''CA Fail'' ',
+                        'WHEN c.Final_marks < 35 THEN ''ESA Fail'' ',
+                        'ELSE ''Fail'' END');
+
+    PREPARE stmt FROM @sql;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+
+    SELECT CONCAT('✓ Grades updated in: ', table_name) AS Result;
+END //
+
+DELIMITER ;
+
+
+-- call procedure
+
+CALL Update_Grades('your_table_name');
