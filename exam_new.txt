@@ -6,6 +6,8 @@ CREATE TABLE DBMS_PRACTICUM (
     CA_marks DECIMAL(5,2),
     END_marks DECIMAL(5,2),
     Final_marks DECIMAL(5,2),
+    Grade VARCHAR(2),
+    Description VARCHAR(30),
     PRIMARY KEY (Course_id, Reg_no),
     FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
     FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
@@ -13,7 +15,7 @@ CREATE TABLE DBMS_PRACTICUM (
 
 
 INSERT INTO DBMS_PRACTICUM 
-(Course_id, Reg_no, Project, Mid, CA_marks, END_marks, Final_marks)
+(Course_id, Reg_no, Project, Mid, CA_marks, END_marks, Final_marks,Grade,Description)
 VALUES
 -- Proper Students (2023 Batch)
 (('ICT1222', 'TG/2023/1701', 85, 78, NULL, 82, NULL),
@@ -46,6 +48,8 @@ CREATE TABLE SERVER_SIDE_WEB (
     CA_marks DECIMAL(5,2),
     END_marks DECIMAL(5,2),
     Final_marks DECIMAL(5,2),
+    Grade VARCHAR(2),
+    Description VARCHAR(30),
     PRIMARY KEY (Course_id, Reg_no),
     FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
     FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
@@ -55,7 +59,7 @@ CREATE TABLE SERVER_SIDE_WEB (
 
 
 INSERT INTO SERVER_SIDE_WEB 
-(Course_id, Reg_no, Q1, Q2, Q3, Project, Mid, CA_marks, END_marks, Final_marks)
+(Course_id, Reg_no, Q1, Q2, Q3, Project, Mid, CA_marks, END_marks, Final_marks,Grade,Description)
 VALUES
 -- Proper Students (2023 Batch)
 ('ICT1233', 'TG/2023/1701', 75, 80, 85, 88, 78, NULL, 82, NULL),
@@ -86,6 +90,8 @@ CREATE TABLE COMPUTER_ARCHITECTURE (
     CA_marks DECIMAL(5,2),
     END_marks DECIMAL(5,2),
     Final_marks DECIMAL(5,2),
+    Grade VARCHAR(2),
+    Description VARCHAR(30),
     PRIMARY KEY (Course_id, Reg_no),
     FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
     FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
@@ -93,7 +99,7 @@ CREATE TABLE COMPUTER_ARCHITECTURE (
 
 
 INSERT INTO COMPUTER_ARCHITECTURE 
-(Course_id, Reg_no, Q1, Q2, Q3, Assessment, Mid, CA_marks, END_marks, Final_marks)
+(Course_id, Reg_no, Q1, Q2, Q3, Assessment, Mid, CA_marks, END_marks, Final_marks,Grade,Description)
 VALUES
 -- Proper Students (2023 Batch)
 ('ICT1242', 'TG/2023/1701', 70, 75, 72, 80, 74, NULL, 78, NULL),
@@ -123,6 +129,8 @@ CREATE TABLE ENGLISH (
     CA_marks DECIMAL(5,2),
     END_marks DECIMAL(5,2),
     Final_marks DECIMAL(5,2),
+    Grade VARCHAR(2),
+    Description VARCHAR(30),
     PRIMARY KEY (Course_id, Reg_no),
     FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
     FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
@@ -130,7 +138,7 @@ CREATE TABLE ENGLISH (
 
 
 INSERT INTO ENGLISH
-(Course_id, Reg_no, Mid, Assessment, CA_marks, END_marks, Final_marks)
+(Course_id, Reg_no, Mid, Assessment, CA_marks, END_marks, Final_marks,Grade,Description)
 VALUES
 -- Proper Students (2023 Batch)
 ('ENG1222', 'TG/2023/1701', 78, 85, NULL, 82, NULL),
@@ -161,6 +169,8 @@ CREATE TABLE DATABASE_MANAGEMENT_SYSTEM (
     CA_marks DECIMAL(5,2),
     END_marks DECIMAL(5,2),
     Final_marks DECIMAL(5,2),
+    Grade VARCHAR(2),
+    Description VARCHAR(30),
     PRIMARY KEY (Course_id, Reg_no),
     FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
     FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
@@ -169,7 +179,7 @@ CREATE TABLE DATABASE_MANAGEMENT_SYSTEM (
 
 
 INSERT INTO DATABASE_MANAGEMENT_SYSTEM
-(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks)
+(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks,Grade,Description)
 VALUES
 -- Proper Students (2023 Batch)
 ('ICT1212', 'TG/2023/1701', 75, 80, 78, 82, NULL, 85, NULL),
@@ -199,6 +209,8 @@ CREATE TABLE DISCRETE_MATHEMATICS (
     CA_marks DECIMAL(5,2),
     END_marks DECIMAL(5,2),
     Final_marks DECIMAL(5,2),
+    Grade VARCHAR(2),
+    Description VARCHAR(30),
     PRIMARY KEY (Course_id, Reg_no),
     FOREIGN KEY (Course_id) REFERENCES COURSE_UNIT(Course_id),
     FOREIGN KEY (Reg_no) REFERENCES STUDENT(Reg_no)
@@ -206,7 +218,7 @@ CREATE TABLE DISCRETE_MATHEMATICS (
 
 
 INSERT INTO DISCRETE_MATHEMATICS
-(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks)
+(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks,Grade,Description)
 VALUES
 -- Proper Students (2023 Batch)
 ('TMS1233', 'TG/2023/1701', 75, 80, 78, 82, NULL, 85, NULL),
@@ -236,13 +248,16 @@ CREATE TABLE FUNDAMENTALS_MANAGEMENT (
     Mid DECIMAL(5,2),
     CA_marks DECIMAL(5,2),
     END_marks DECIMAL(5,2),
-    Final_marks DECIMAL(5,2)
+    Final_marks DECIMAL(5,2),
+    Grade VARCHAR(2),
+    Description VARCHAR(30),
+
 );
 
 
 
 INSERT INTO FUNDAMENTALS_MANAGEMENT
-(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks)
+(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks,Grade,Description)
 VALUES
 -- Proper Students (2023 Batch)
 ('TCS1212', 'TG/2023/1701', 75, 80, 78, 82, NULL, 85, NULL),
@@ -271,14 +286,17 @@ CREATE TABLE COMPUTER_NETWORK (
     Mid DECIMAL(5,2),
     CA_marks DECIMAL(5,2),
     END_marks DECIMAL(5,2),
-    Final_marks DECIMAL(5,2)
+    Final_marks DECIMAL(5,2),
+    Grade VARCHAR(2),
+    Description VARCHAR(30),
+
 );
 
 
 
 
 INSERT INTO COMPUTER_NETWORK
-(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks)
+(Course_id, Reg_no, Q1, Q2, Q3, Mid, CA_marks, END_marks, Final_marks,Grade,Description)
 VALUES
 -- Proper Students (2023 Batch)
 ('ICT1253', 'TG/2023/1701', 75, 80, 78, 82, NULL, 85, NULL),
