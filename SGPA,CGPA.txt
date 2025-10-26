@@ -1,0 +1,183 @@
+DELIMITER //
+
+CREATE PROCEDURE Student_GPA_Report(IN student_id VARCHAR(20))
+BEGIN
+    -- Display subject-wise grades with grade points (All 8 subjects)
+    SELECT 
+        ag.Reg_no,
+        ag.Course_id,
+        ag.Grade,
+        ag.Description,
+        CASE
+            WHEN ag.Grade = 'A+' THEN 4.00
+            WHEN ag.Grade = 'A' THEN 4.00
+            WHEN ag.Grade = 'A-' THEN 3.70
+            WHEN ag.Grade = 'B+' THEN 3.30
+            WHEN ag.Grade = 'B' THEN 3.00
+            WHEN ag.Grade = 'B-' THEN 2.70
+            WHEN ag.Grade = 'C+' THEN 2.30
+            WHEN ag.Grade = 'C' THEN 2.00
+            WHEN ag.Grade = 'C-' THEN 1.70
+            WHEN ag.Grade = 'D' THEN 1.30
+            WHEN ag.Grade IN ('E', 'E(CA)', 'E(ESA)', 'E(CA& ESA)') THEN 0.00
+            ELSE NULL  -- For W, N (excluded from GPA)
+        END AS Grade_Point,
+        ag.Credit
+    FROM (
+        -- ICT1212 - DATABASE_MANAGEMENT_SYSTEM
+        SELECT Reg_no, Course_id, Grade, Description, 2 AS Credit 
+        FROM DATABASE_MANAGEMENT_SYSTEM 
+        WHERE Reg_no = student_id AND Grade IS NOT NULL
+        
+        UNION ALL
+        
+        -- ICT1222 - DBMS_PRACTICUM
+        SELECT Reg_no, Course_id, Grade, Description, 2 AS Credit 
+        FROM DBMS_PRACTICUM 
+        WHERE Reg_no = student_id AND Grade IS NOT NULL
+        
+        UNION ALL
+        
+        -- ICT1233 - SERVER_SIDE_WEB
+        SELECT Reg_no, Course_id, Grade, Description, 3 AS Credit 
+        FROM SERVER_SIDE_WEB 
+        WHERE Reg_no = student_id AND Grade IS NOT NULL
+        
+        UNION ALL
+        
+        -- ICT1242 - COMPUTER_ARCHITECTURE
+        SELECT Reg_no, Course_id, Grade, Description, 2 AS Credit 
+        FROM COMPUTER_ARCHITECTURE 
+        WHERE Reg_no = student_id AND Grade IS NOT NULL
+        
+        UNION ALL
+        
+        -- ICT1253 - COMPUTER_NETWORK
+        SELECT Reg_no, Course_id, Grade, Description, 3 AS Credit 
+        FROM COMPUTER_NETWORK 
+        WHERE Reg_no = student_id AND Grade IS NOT NULL
+        
+        UNION ALL
+        
+        -- TCS1212 - FUNDAMENTALS_MANAGEMENT
+        SELECT Reg_no, Course_id, Grade, Description, 2 AS Credit 
+        FROM FUNDAMENTALS_MANAGEMENT 
+        WHERE Reg_no = student_id AND Grade IS NOT NULL
+        
+        UNION ALL
+        
+        -- TMS1233 - DISCRETE_MATHEMATICS
+        SELECT Reg_no, Course_id, Grade, Description, 3 AS Credit 
+        FROM DISCRETE_MATHEMATICS 
+        WHERE Reg_no = student_id AND Grade IS NOT NULL
+        
+        UNION ALL
+        
+        -- ENG1222 - ENGLISH
+        SELECT Reg_no, Course_id, Grade, Description, 2 AS Credit 
+        FROM ENGLISH 
+        WHERE Reg_no = student_id AND Grade IS NOT NULL
+    ) AS ag
+    ORDER BY ag.Course_id;
+
+    -- Calculate SGPA
+    SELECT 
+        student_id AS Reg_no,
+        'Current Semester' AS Semester,
+        ROUND(
+            SUM(
+                CASE
+                    WHEN Grade = 'A+' THEN 4.00 * Credit
+                    WHEN Grade = 'A' THEN 4.00 * Credit
+                    WHEN Grade = 'A-' THEN 3.70 * Credit
+                    WHEN Grade = 'B+' THEN 3.30 * Credit
+                    WHEN Grade = 'B' THEN 3.00 * Credit
+                    WHEN Grade = 'B-' THEN 2.70 * Credit
+                    WHEN Grade = 'C+' THEN 2.30 * Credit
+                    WHEN Grade = 'C' THEN 2.00 * Credit
+                    WHEN Grade = 'C-' THEN 1.70 * Credit
+                    WHEN Grade = 'D' THEN 1.30 * Credit
+                    WHEN Grade IN ('E', 'E(CA)', 'E(ESA)', 'E(CA& ESA)') THEN 0.00 * Credit
+                    ELSE 0
+                END
+            ) / 
+            NULLIF(SUM(
+                CASE 
+                    WHEN Grade IN ('W', 'N') THEN 0
+                    ELSE Credit 
+                END
+            ), 0)
+        , 2) AS SGPA
+    FROM (
+        SELECT Grade, 2 AS Credit FROM DATABASE_MANAGEMENT_SYSTEM WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 2 AS Credit FROM DBMS_PRACTICUM WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 3 AS Credit FROM SERVER_SIDE_WEB WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 2 AS Credit FROM COMPUTER_ARCHITECTURE WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 3 AS Credit FROM COMPUTER_NETWORK WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 2 AS Credit FROM FUNDAMENTALS_MANAGEMENT WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 3 AS Credit FROM DISCRETE_MATHEMATICS WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 2 AS Credit FROM ENGLISH WHERE Reg_no = student_id AND Grade IS NOT NULL
+    ) AS semester_grades;
+
+    -- Calculate CGPA
+    SELECT 
+        student_id AS Reg_no,
+        ROUND(
+            SUM(
+                CASE
+                    WHEN Grade = 'A+' THEN 4.00 * Credit
+                    WHEN Grade = 'A' THEN 4.00 * Credit
+                    WHEN Grade = 'A-' THEN 3.70 * Credit
+                    WHEN Grade = 'B+' THEN 3.30 * Credit
+                    WHEN Grade = 'B' THEN 3.00 * Credit
+                    WHEN Grade = 'B-' THEN 2.70 * Credit
+                    WHEN Grade = 'C+' THEN 2.30 * Credit
+                    WHEN Grade = 'C' THEN 2.00 * Credit
+                    WHEN Grade = 'C-' THEN 1.70 * Credit
+                    WHEN Grade = 'D' THEN 1.30 * Credit
+                    WHEN Grade IN ('E', 'E(CA)', 'E(ESA)', 'E(CA& ESA)') THEN 0.00 * Credit
+                    ELSE 0
+                END
+            ) / 
+            NULLIF(SUM(
+                CASE 
+                    WHEN Grade IN ('W', 'N') THEN 0
+                    ELSE Credit 
+                END
+            ), 0)
+        , 2) AS CGPA
+    FROM (
+        SELECT Grade, 2 AS Credit FROM DATABASE_MANAGEMENT_SYSTEM WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 2 AS Credit FROM DBMS_PRACTICUM WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 3 AS Credit FROM SERVER_SIDE_WEB WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 2 AS Credit FROM COMPUTER_ARCHITECTURE WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 3 AS Credit FROM COMPUTER_NETWORK WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 2 AS Credit FROM FUNDAMENTALS_MANAGEMENT WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 3 AS Credit FROM DISCRETE_MATHEMATICS WHERE Reg_no = student_id AND Grade IS NOT NULL
+        UNION ALL
+        SELECT Grade, 2 AS Credit FROM ENGLISH WHERE Reg_no = student_id AND Grade IS NOT NULL
+    ) AS all_grades;
+
+END //
+
+DELIMITER ;
+
+
+
+
+-- CALL PROCUDERCES
+ 
+call Student_GPA_Report('student reg_no');
