@@ -5,7 +5,7 @@ CREATE TABLE DEAN (
     Email VARCHAR(100) UNIQUE,
     Role VARCHAR(50),
     Gender CHAR(1),
-    Dep_name VARCHAR(3)
+    Dep_name VARCHAR(3),
     Start_date DATE NOT NULL,
     End_date DATE,
     
