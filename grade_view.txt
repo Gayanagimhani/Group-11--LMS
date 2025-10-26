@@ -1,0 +1,84 @@
+-- View: Grades by Subject (Whole Batch)
+
+CREATE OR REPLACE VIEW V_Subject_Grades AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    cu.Course_id,
+    cu.Course_name,
+    em.Grade,
+    em.Description
+FROM STUDENT s
+JOIN COURSE_UNIT cu ON cu.Course_id = 'ICT1212'
+JOIN DATABASE_MANAGEMENT_SYSTEM em ON s.Reg_no = em.Reg_no
+WHERE em.Grade IS NOT NULL;
+
+-- for use:
+
+SELECT * FROM V_Subject_Grades;  
+-- Displays all grades for ICT1212 (DBMS)
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-- View: Grades for Each Student (All Subjects)
+
+CREATE OR REPLACE VIEW V_Student_Grades AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    cu.Course_id,
+    cu.Course_name,
+    t.Grade,
+    t.Description
+FROM STUDENT s
+JOIN COURSE_UNIT cu ON cu.Course_id = t.Course_id
+JOIN (
+    SELECT Reg_no, Course_id, Grade, Description FROM DATABASE_MANAGEMENT_SYSTEM
+    UNION ALL
+    SELECT Reg_no, Course_id, Grade, Description FROM DBMS_PRACTICUM
+    UNION ALL
+    SELECT Reg_no, Course_id, Grade, Description FROM SERVER_SIDE_WEB
+    UNION ALL
+    SELECT Reg_no, Course_id, Grade, Description FROM COMPUTER_ARCHITECTURE
+    UNION ALL
+    SELECT Reg_no, Course_id, Grade, Description FROM COMPUTER_NETWORK
+    UNION ALL
+    SELECT Reg_no, Course_id, Grade, Description FROM FUNDAMENTALS_MANAGEMENT
+    UNION ALL
+    SELECT Reg_no, Course_id, Grade, Description FROM DISCRETE_MATHEMATICS
+    UNION ALL
+    SELECT Reg_no, Course_id, Grade, Description FROM ENGLISH
+) AS t ON s.Reg_no = t.Reg_no;
+
+-- for use:
+
+SELECT * FROM V_Student_Grades WHERE Reg_no = 'TG/2023/1701';
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-- View: Grades for Whole Batch (All Subjects, All Students)
+
+CREATE OR REPLACE VIEW V_All_Batch_Grades AS
+SELECT Reg_no, Course_id, Grade, Description
+FROM DATABASE_MANAGEMENT_SYSTEM
+UNION ALL
+SELECT Reg_no, Course_id, Grade, Description FROM DBMS_PRACTICUM
+UNION ALL
+SELECT Reg_no, Course_id, Grade, Description FROM SERVER_SIDE_WEB
+UNION ALL
+SELECT Reg_no, Course_id, Grade, Description FROM COMPUTER_ARCHITECTURE
+UNION ALL
+SELECT Reg_no, Course_id, Grade, Description FROM COMPUTER_NETWORK
+UNION ALL
+SELECT Reg_no, Course_id, Grade, Description FROM FUNDAMENTALS_MANAGEMENT
+UNION ALL
+SELECT Reg_no, Course_id, Grade, Description FROM DISCRETE_MATHEMATICS
+UNION ALL
+SELECT Reg_no, Course_id, Grade, Description FROM ENGLISH;
+
+-- for use:
+
+SELECT * FROM V_All_Batch_Grades;  
+-- shows all students, all subjects
+
+
