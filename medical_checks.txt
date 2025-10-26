@@ -1,0 +1,71 @@
+-- Students with ≥ 80% (no medicals)
+
+CREATE OR REPLACE VIEW V_Above80_No_Medical AS
+SELECT 
+    a.Reg_no,
+    c.Course_id,
+    c.Course_name,
+    a.Percentage,
+    a.Number_of_medicals
+FROM FINAL_ATTENDANCE a
+JOIN COURSE_UNIT c ON a.Course_id = c.Course_id
+WHERE a.Percentage >= 80
+  AND a.Number_of_medicals = 0
+ORDER BY a.Reg_no, c.Course_id;
+
+SELECT * FROM V_Above80_No_Medical;
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- View: Students with Medical ≥ 80%
+
+CREATE OR REPLACE VIEW V_Below80_No_Medical AS
+SELECT 
+    a.Reg_no,
+    c.Course_id,
+    c.Course_name,
+    a.Percentage,
+    a.Number_of_medicals
+FROM FINAL_ATTENDANCE a
+JOIN COURSE_UNIT c ON a.Course_id = c.Course_id
+WHERE a.Percentage < 80
+  AND a.Number_of_medicals = 0
+ORDER BY a.Reg_no, c.Course_id;
+
+SELECT * FROM V_Below80_No_Medical;
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- View: Students without Medical < 80%
+
+CREATE OR REPLACE VIEW V_Above80_With_Medical AS
+SELECT 
+    a.Reg_no,
+    c.Course_id,
+    c.Course_name,
+    a.Percentage,
+    a.Number_of_medicals
+FROM FINAL_ATTENDANCE a
+JOIN COURSE_UNIT c ON a.Course_id = c.Course_id
+WHERE a.Percentage >= 80
+  AND a.Number_of_medicals > 0
+ORDER BY a.Reg_no, c.Course_id;
+
+SELECT * FROM V_Above80_With_Medical;
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- View: Students with Medical < 80%
+
+CREATE OR REPLACE VIEW V_Below80_With_Medical AS
+SELECT 
+    a.Reg_no,
+    c.Course_id,
+    c.Course_name,
+    a.Percentage,
+    a.Number_of_medicals
+FROM FINAL_ATTENDANCE a
+JOIN COURSE_UNIT c ON a.Course_id = c.Course_id
+WHERE a.Percentage < 80
+  AND a.Number_of_medicals > 0
+ORDER BY a.Reg_no, c.Course_id;
+
+SELECT * FROM V_Below80_With_Medical;
+
