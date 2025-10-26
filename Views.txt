@@ -1,0 +1,83 @@
+-- View: Marks Summary by Subject (Whole Batch)
+
+CREATE OR REPLACE VIEW V_Batch_Subject_Marks AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    cu.Course_id,
+    cu.Course_name,
+    em.CA_marks,
+    em.END_marks,
+    em.Final_marks,
+    em.Grade,
+    em.Description
+FROM STUDENT s
+JOIN DATABASE_MANAGEMENT_SYSTEM em ON s.Reg_no = em.Reg_no
+JOIN COURSE_UNIT cu ON em.Course_id = cu.Course_id;
+
+-- for use: 
+
+SELECT * FROM V_Batch_Subject_Marks WHERE Course_id = 'ICT1212';
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-- View: Individual Student Marks (All Subjects)
+
+CREATE OR REPLACE VIEW V_Student_All_Subjects AS
+SELECT 
+    s.Reg_no,
+    CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
+    cu.Course_id,
+    cu.Course_name,
+    em.CA_marks,
+    em.END_marks,
+    em.Final_marks,
+    em.Grade,
+    em.Description
+FROM STUDENT s
+JOIN COURSE_UNIT cu ON cu.Course_id IN     ('ICT1212','ICT1222','ICT1233','ICT1242','ICT1253','TMS1233','TCS1212','ENG1212')
+LEFT JOIN DATABASE_MANAGEMENT_SYSTEM em ON em.Reg_no = s.Reg_no
+AND em.Course_id = cu.Course_id;
+
+-- for use:
+
+SELECT * FROM V_Student_All_Subjects WHERE Reg_no = 'TG/2023/1701';
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-- View: Full Batch Summary (All Subjects)
+
+CREATE OR REPLACE VIEW V_All_Batch_Marks AS
+SELECT Reg_no, Course_id, CA_marks, END_marks, Final_marks, Grade, Description
+FROM DATABASE_MANAGEMENT_SYSTEM
+UNION ALL
+SELECT Reg_no, Course_id, CA_marks, END_marks, Final_marks, Grade, Description
+FROM DBMS_PRACTICUM
+UNION ALL
+SELECT Reg_no, Course_id, CA_marks, END_marks, Final_marks, Grade, Description
+FROM SERVER_SIDE_WEB
+UNION ALL
+SELECT Reg_no, Course_id, CA_marks, END_marks, Final_marks, Grade, Description
+FROM COMPUTER_ARCHITECTURE
+UNION ALL
+SELECT Reg_no, Course_id, CA_marks, END_marks, Final_marks, Grade, Description
+FROM COMPUTER_NETWORK
+UNION ALL
+SELECT Reg_no, Course_id, CA_marks, END_marks, Final_marks, Grade, Description
+FROM FUNDAMENTALS_MANAGEMENT
+UNION ALL
+SELECT Reg_no, Course_id, CA_marks, END_marks, Final_marks, Grade, Description
+FROM DISCRETE_MATHEMATICS
+UNION ALL
+SELECT Reg_no, Course_id, CA_marks, END_marks, Final_marks, Grade, Description
+FROM ENGLISH;
+
+-- for use:
+
+SELECT * FROM V_All_Batch_Marks;
+
+-- filter
+
+SELECT * FROM V_All_Batch_Marks WHERE Reg_no = 'TG/2023/1705';
+SELECT * FROM V_All_Batch_Marks WHERE Course_id = 'ICT1242';
+
