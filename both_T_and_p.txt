@@ -7,11 +7,9 @@ SELECT
     c.Course_name,
     'Theory' AS Session_Type,
     COUNT(*) AS Total_Sessions,
-    SUM
-	(CASE WHEN at.Attendance_status = 'Present' THEN 1 ELSE 0 END) AS Attended,
+    SUM(CASE WHEN at.Attendance_status = 'Present' THEN 1 ELSE 0 END) AS Attended,
     ROUND(
-        (SUM
-		(CASE WHEN at.Attendance_status = 'Present' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2
+        (SUM(CASE WHEN at.Attendance_status = 'Present' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2
     ) AS Percentage
 FROM ATTENDANCE at
 JOIN COURSE_UNIT c ON at.Course_id = c.Course_id
