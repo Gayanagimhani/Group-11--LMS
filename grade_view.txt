@@ -48,7 +48,9 @@ JOIN (
     SELECT Reg_no, Course_id, Grade, Description FROM DISCRETE_MATHEMATICS
     UNION ALL
     SELECT Reg_no, Course_id, Grade, Description FROM ENGLISH
-) AS t ON s.Reg_no = t.Reg_no;
+) AS t ON s.Reg_no = t.Reg_no 
+	JOIN COURSE_UNIT cu
+	ON cu.Course_id=t.Course_id ;
 
 -- for use:
 
