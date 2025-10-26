@@ -1,8 +1,8 @@
 --CREATE  FINAL_ATTENDANCE TABLE
 
 CREATE TABLE FINAL_ATTENDANCE (
-    Reg_no VARCHAR(12) NOT NULL,
-    Course_id VARCHAR(7) NOT NULL,
+    Reg_no CHAR(12) NOT NULL,
+    Course_id CHAR(7) NOT NULL,
     Number_of_days_held INT NOT NULL,
     Number_of_days_attended INT NOT NULL,
     Number_of_medicals INT DEFAULT 0,
