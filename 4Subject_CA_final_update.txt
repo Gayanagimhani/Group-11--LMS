@@ -1,0 +1,253 @@
+-- ICT1253 (COMPUTER_NETWORK)
+
+DELIMITER //
+
+CREATE PROCEDURE Update_COMPUTER_NETWORK()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE v_Reg_no VARCHAR(13);
+    DECLARE v_Q1, v_Q2, v_Q3, v_Mid, v_END, v_CA, v_Final DECIMAL(5,2);
+    
+    DECLARE cur CURSOR FOR 
+        SELECT Reg_no, Q1, Q2, Q3, Mid, END_marks 
+        FROM COMPUTER_NETWORK 
+        WHERE Reg_no IS NOT NULL;
+   
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+    
+    OPEN cur;
+    
+    read_loop: LOOP
+        FETCH cur INTO v_Reg_no, v_Q1, v_Q2, v_Q3, v_Mid, v_END;
+        
+        IF done = 1 THEN
+            LEAVE read_loop;
+        END IF;
+        
+        -- Calculate sum of two highest quizzes (out of three)
+        SET @quiz_sum = (
+            SELECT SUM(quiz_score) 
+            FROM (
+                SELECT quiz_score 
+                FROM (
+                    SELECT v_Q1 AS quiz_score UNION ALL
+                    SELECT v_Q2 UNION ALL
+                    SELECT v_Q3
+                ) AS quizzes 
+                ORDER BY quiz_score DESC 
+                LIMIT 2
+            ) AS top_quizzes
+        );
+        
+        -- Calculate CA marks: 10% of top two quizzes + 30% of Mid
+        SET v_CA = ((@quiz_sum/2) * 0.10) + (v_Mid * 0.30);
+
+	-- Calculate Final Marks (CA + 70% of END_marks)
+        SET v_Final = v_CA + (v_END * 0.70);
+        
+        -- Update the CA_marks column
+        UPDATE COMPUTER_NETWORK 
+        SET CA_marks = v_CA , 	
+	 Final_marks = v_Final
+        WHERE Reg_no = v_Reg_no;
+        
+    END LOOP;
+    
+    CLOSE cur;
+END //
+
+DELIMITER ;
+
+-- CALL PROCEDURE
+CALL Update_COMPUTER_NETWORK();
+
+-- Display
+SELECT * FROM COMPUTER_NETWORK;
+
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- TCS1212 (FUNDAMENTALS_MANAGEMENT)
+
+DELIMITER //
+
+CREATE PROCEDURE Update_FUNDAMENTALS_MANAGEMENT()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE v_Reg_no VARCHAR(13);
+    DECLARE v_Q1, v_Q2, v_Q3, v_Mid, v_END, v_CA, v_Final DECIMAL(5,2);
+    
+    DECLARE cur CURSOR FOR 
+        SELECT Reg_no, Q1, Q2, Q3, Mid, END_marks 
+        FROM FUNDAMENTALS_MANAGEMENT 
+        WHERE Reg_no IS NOT NULL;
+    
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+    
+    OPEN cur;
+    
+    read_loop: LOOP
+        FETCH cur INTO v_Reg_no, v_Q1, v_Q2, v_Q3, v_Mid, v_END;
+        
+        IF done = 1 THEN
+            LEAVE read_loop;
+        END IF;
+        
+        -- Calculate sum of two highest quizzes (out of three)
+        SET @quiz_sum = (
+            SELECT SUM(quiz_score) 
+            FROM (
+                SELECT quiz_score 
+                FROM (
+                    SELECT v_Q1 AS quiz_score UNION ALL
+                    SELECT v_Q2 UNION ALL
+                    SELECT v_Q3
+                ) AS quizzes 
+                ORDER BY quiz_score DESC 
+                LIMIT 2
+            ) AS top_quizzes
+        );
+        
+        -- Calculate CA marks: 10% of top two quizzes + 30% of Mid
+        SET v_CA = ((@quiz_sum/2) * 0.10) + (v_Mid * 0.30);
+
+	-- Calculate Final Marks (CA + 70% of END_marks)
+        SET v_Final = v_CA + (v_END * 0.70);
+        
+        -- Update the CA_marks column
+        UPDATE FUNDAMENTALS_MANAGEMENT 
+        SET CA_marks = v_CA , 	
+	 Final_marks = v_Final
+        WHERE Reg_no = v_Reg_no;
+        
+    END LOOP;
+    
+    CLOSE cur;
+END //
+
+DELIMITER ;
+
+-- CALL PROCEDURE
+CALL Update_FUNDAMENTALS_MANAGEMENT();
+
+-- Display
+SELECT * FROM FUNDAMENTALS_MANAGEMENT;
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- TMS1233 (DISCRETE_MATHEMATICS)
+
+DELIMITER //
+
+CREATE PROCEDURE Update_DISCRETE_MATHEMATICS()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE v_Reg_no VARCHAR(13);
+    DECLARE v_Q1, v_Q2, v_Q3, v_Mid, v_END, v_CA, v_Final DECIMAL(5,2);
+
+    DECLARE cur CURSOR FOR 
+        SELECT Reg_no, Q1, Q2, Q3, Mid, END_marks 
+        FROM DISCRETE_MATHEMATICS 
+        WHERE Reg_no IS NOT NULL;
+    
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+    
+    OPEN cur;
+    
+    read_loop: LOOP
+        FETCH cur INTO v_Reg_no, v_Q1, v_Q2, v_Q3, v_Mid, v_END;
+        
+        IF done = 1 THEN
+            LEAVE read_loop;
+        END IF;
+        
+        -- Calculate sum of two highest quizzes (out of three)
+        SET @quiz_sum = (
+            SELECT SUM(quiz_score) 
+            FROM (
+                SELECT quiz_score 
+                FROM (
+                    SELECT v_Q1 AS quiz_score UNION ALL
+                    SELECT v_Q2 UNION ALL
+                    SELECT v_Q3
+                ) AS quizzes 
+                ORDER BY quiz_score DESC 
+                LIMIT 2
+            ) AS top_quizzes
+        );
+        
+        -- Calculate CA marks: 10% of top two quizzes + 30% of Mid
+        SET v_CA = ((@quiz_sum/2) * 0.10) + (v_Mid * 0.30);
+
+	-- Calculate Final Marks (CA + 70% of END_marks)
+        SET v_Final = v_CA + (v_END * 0.70);
+        
+        -- Update the CA_marks column
+        UPDATE DISCRETE_MATHEMATICS 
+        SET CA_marks = v_CA , 
+	   Final_marks = v_Final 
+        WHERE Reg_no = v_Reg_no;
+        
+    END LOOP;
+    
+    CLOSE cur;
+END //
+
+DELIMITER ;
+
+-- CALL PROCEDURE
+CALL Update_DISCRETE_MATHEMATICS();
+
+-- Display
+SELECT * FROM DISCRETE_MATHEMATICS;
+
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- ENG1222 (ENGLISH)
+
+DELIMITER //
+
+CREATE PROCEDURE Update_ENGLISH()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE v_Reg_no VARCHAR(13);
+    DECLARE v_Mid, v_Assessment, v_END, v_CA, v_Final DECIMAL(5,2); 
+    
+    DECLARE cur CURSOR FOR 
+        SELECT Reg_no, Mid, Assessment, END_marks  
+        FROM ENGLISH 
+        WHERE Reg_no IS NOT NULL;
+    
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+    
+    OPEN cur;
+    
+    read_loop: LOOP
+        FETCH cur INTO v_Reg_no, v_Mid, v_Assessment, v_END;
+        
+        IF done = 1 THEN
+            LEAVE read_loop;
+        END IF;
+        
+        -- Calculate CA marks: 25% of Mid + 15% of Assessment
+        SET v_CA = (v_Mid * 0.25) + (v_Assessment * 0.15);
+
+	-- Calculate Final Marks (CA + 70% of END_marks)
+        SET v_Final = v_CA + (v_END * 0.70);
+        
+        -- Update the CA_marks column
+        UPDATE ENGLISH 
+        SET CA_marks = v_CA ,
+	 Final_marks = v_Final 
+        WHERE Reg_no = v_Reg_no;
+        
+    END LOOP;
+    
+    CLOSE cur;
+END //
+
+DELIMITER ;
+
+
+-- CALL PROCEDURE
+CALL Update_ENGLISH();
+
+-- Display
+SELECT * FROM ENGLISH;
