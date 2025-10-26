@@ -9,7 +9,7 @@ SELECT
     a.Percentage,
     a.Eligibility
 FROM ATTENDANCE at
-JOIN ALL_ATTENDANCE a
+JOIN FINAL_ATTENDANCE a
     ON at.Reg_no = a.Reg_no
     AND at.Course_id = a.Course_id;
 
@@ -28,7 +28,7 @@ SELECT
     ROUND(AVG(a.Percentage), 2) AS Average_Percentage,
     SUM(CASE WHEN a.Eligibility = 'Eligible' THEN 1 ELSE 0 END) AS Eligible_Students,
     SUM(CASE WHEN a.Eligibility = 'Not Eligible' THEN 1 ELSE 0 END) AS Not_Eligible_Students
-FROM ALL_ATTENDANCE a
+FROM FINAL_ATTENDANCE a
 JOIN COURSE_UNIT c
     ON a.Course_id = c.Course_id
 GROUP BY a.Course_id, c.Course_name
@@ -49,7 +49,7 @@ SELECT
     a.Number_of_medicals,
     a.Percentage,
     a.Eligibility
-FROM ALL_ATTENDANCE a
+FROM FINAL_ATTENDANCE a
 JOIN COURSE_UNIT c 
     ON a.Course_id = c.Course_id;
 
@@ -72,7 +72,7 @@ SELECT
     a.Percentage,
     a.Eligibility
 FROM ATTENDANCE at
-JOIN ALL_ATTENDANCE a 
+JOIN FINAL_ATTENDANCE a 
     ON at.Reg_no = a.Reg_no AND at.Course_id = a.Course_id
 JOIN COURSE_UNIT c 
     ON at.Course_id = c.Course_id;
