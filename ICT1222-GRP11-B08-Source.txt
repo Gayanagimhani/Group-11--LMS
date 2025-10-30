@@ -3801,7 +3801,7 @@ SELECT * FROM V_Subject_Grades;
 -- View: Grades for Each Student (All Subjects)
 
 CREATE OR REPLACE VIEW V_Student_Grades AS
-SELECT 
+SELECT
     s.Reg_no,
     CONCAT(s.F_name, ' ', s.L_name) AS Student_Name,
     cu.Course_id,
@@ -3809,7 +3809,6 @@ SELECT
     t.Grade,
     t.Description
 FROM STUDENT s
-JOIN COURSE_UNIT cu ON cu.Course_id = t.Course_id
 JOIN (
     SELECT Reg_no, Course_id, Grade, Description FROM DATABASE_MANAGEMENT_SYSTEM
     UNION ALL
@@ -3826,9 +3825,8 @@ JOIN (
     SELECT Reg_no, Course_id, Grade, Description FROM DISCRETE_MATHEMATICS
     UNION ALL
     SELECT Reg_no, Course_id, Grade, Description FROM ENGLISH
-) AS t ON s.Reg_no = t.Reg_no 
-	JOIN COURSE_UNIT cu
-	ON cu.Course_id=t.Course_id ;
+) AS t ON s.Reg_no = t.Reg_no
+JOIN COURSE_UNIT cu ON t.Course_id = cu.Course_id;
 
 -- for use:
 
