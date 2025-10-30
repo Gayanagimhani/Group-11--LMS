@@ -232,6 +232,20 @@ INSERT INTO TECHNICAL_OFFICER_CONTACT (Tec_id, Contact, Contact_type) VALUES
 
  -- create dean table
 
+CREATE TABLE DEAN (
+    Lec_id CHAR(6) PRIMARY KEY,
+    F_name VARCHAR(40) NOT NULL,
+    L_name VARCHAR(40) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Role VARCHAR(50),
+    Gender CHAR(1),
+    Dep_name VARCHAR(3),
+    Start_date DATE NOT NULL,
+    End_date DATE,
+    
+    FOREIGN KEY (Lec_id) REFERENCES LECTURERE(Lec_id) ON DELETE CASCADE
+);
+
 
 INSERT INTO DEAN (Lec_id, F_name, L_name, Email, Role, Gender, Dep_name, Start_date, End_date) 
 VALUES
