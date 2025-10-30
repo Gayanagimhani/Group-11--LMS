@@ -5,70 +5,6 @@ CREATE DATABASE studentperformanceDB;
 
 USE studentperformanceDB;
 
-CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'admin1234';
-GRANT ALL PRIVILEGES ON *.*
-TO 'Admin'@'localhost'
-WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-
-CREATE USER 'Dean'@'localhost' IDENTIFIED BY 'dean1234';
-GRANT ALL PRIVILEGES ON *.*
-TO 'Dean'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'lecturer1234';
-GRANT ALL PRIVILEGES ON *.*
-TO 'Lecturer'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'TechnicalOfficer'@'localhost' IDENTIFIED BY 'technical1234';
-GRANT SELECT,INSERT,UPDATE,DELETE ON studentperformanceDB.ATTENDANCE 
-TO 'TechnicalOfficer'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON studentperformanceDB.COMPUTER_ARCHITECTURE
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON studentperformanceDB.COMPUTER_NETWORK
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON studentperformanceDB.DATABASE_MANAGEMENT_SYSTEM 
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON studentperformanceDB.DBMS_PRACTICUM 
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON studentperformanceDB.DISCRETE_MATHEMATICS 
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON studentperformanceDB.ENGLISH 
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON studentperformanceDB.FUNDAMENTALS_MANAGEMENT 
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
-
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
-GRANT SELECT ON studentperformanceDB.SERVER_SIDE_WEB
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
-
-GRANT SELECT ON studentperformanceDB.FINAL_ATTENDANCE
-TO 'Student'@'localhost';
-FLUSH PRIVILEGES;
 
 -- create student details table
 
@@ -301,7 +237,7 @@ INSERT INTO DEAN (Lec_id, F_name, L_name, Email, Role, Gender, Dep_name, Start_d
 VALUES
 ('LEC001','Nuwan', 'Laksiri', 'NuwanLaksiri001@gmail.com',  'senior, seniorlec', 'M', 'ICT', '2022-01-01', '2025-12-31');
 
--- creat dean contact table
+-- create dean contact table
 
 
 CREATE TABLE DEAN_CONTACT (
@@ -1224,6 +1160,7 @@ VALUES
 -- TUESDAY
 
 -- ICT1253-Lecture
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1323,7 +1260,7 @@ VALUES
 ('TG/2023/1709','ENG1222','2025-03-07','Theory','Present','No'),
 ('TG/2023/1710','ENG1222','2025-03-07','Theory','Absent','No');
 
- -- WEEK 6 (2025-03-10 to 2025-03-14)
+-- WEEK 6 (2025-03-10 to 2025-03-14)
 
 -- MONDAY
 
@@ -1342,6 +1279,7 @@ VALUES
 ('TG/2023/1710','ICT1233','2025-03-10','Practical','Present','No');
 
 -- TUESDAY
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUE
@@ -1411,6 +1349,7 @@ VALUES
 ('TG/2023/1710','ICT1222','2025-03-13','Practical','Present','No');
 
 -- FRIDAY
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1456,6 +1395,7 @@ VALUES
 
 
 -- TUESDAY 
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1572,6 +1512,7 @@ VALUES
 -- TUESDAY 
 
 -- ICT1253 -Lecture
+
 INSERT INTO ATTENDANCE 
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved) 
 VALUES
@@ -1598,6 +1539,7 @@ VALUES
 ('TG/2023/1710','ICT1242','2025-03-25','Theory','Present','No');
 
 -- WEDNESDAY
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1615,6 +1557,7 @@ VALUES
 -- THURSDAY 
 
 -- ICT1212 Lecture
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1630,6 +1573,7 @@ VALUES
 ('TG/2023/1710','ICT1212','2025-03-27','Theory','Present','No');
 
 -- ICT1222 Practical
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1645,6 +1589,7 @@ VALUES
 ('TG/2023/1710','ICT1222','2025-03-27','Practical','Present','No');
 
 -- FRIDAY
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -1689,6 +1634,7 @@ VALUES
 ('TG/2023/1710','ICT1233','2025-03-31','Theory','Present','No');
 
 -- TUESDAY
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -2441,6 +2387,7 @@ VALUES
 ('TG/2023/1710','ICT1222','2025-05-15','Practical','Present','No');
 
 -- FRIDAY
+
 INSERT INTO ATTENDANCE
 (Reg_no, Course_id, Date,  Session_type, Attendance_status, Medical_approved)
 VALUES
@@ -2487,6 +2434,73 @@ CREATE TABLE FINAL_ATTENDANCE (
 	ON DELETE CASCADE 
 	ON UPDATE CASCADE
 );
+
+--user privileges
+
+CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'admin1234';
+GRANT ALL PRIVILEGES ON *.*
+TO 'Admin'@'localhost'
+WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+CREATE USER 'Dean'@'localhost' IDENTIFIED BY 'dean1234';
+GRANT ALL PRIVILEGES ON *.*
+TO 'Dean'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'lecturer1234';
+GRANT ALL PRIVILEGES ON *.*
+TO 'Lecturer'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'TechnicalOfficer'@'localhost' IDENTIFIED BY 'technical1234';
+GRANT SELECT,INSERT,UPDATE,DELETE ON studentperformanceDB.ATTENDANCE 
+TO 'TechnicalOfficer'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.COMPUTER_ARCHITECTURE
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.COMPUTER_NETWORK
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.DATABASE_MANAGEMENT_SYSTEM 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.DBMS_PRACTICUM 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.DISCRETE_MATHEMATICS 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.ENGLISH 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.FUNDAMENTALS_MANAGEMENT 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.SERVER_SIDE_WEB
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+GRANT SELECT ON studentperformanceDB.FINAL_ATTENDANCE
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
 
 
 -- procedure
