@@ -2435,7 +2435,7 @@ CREATE TABLE FINAL_ATTENDANCE (
 	ON UPDATE CASCADE
 );
 
---user privileges
+-- user privileges
 
 CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'admin1234';
 GRANT ALL PRIVILEGES ON *.*
