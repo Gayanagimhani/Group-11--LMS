@@ -2448,7 +2448,7 @@ GRANT ALL PRIVILEGES ON studentperformanceDB.*
 TO 'Dean'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'lecturer1234';
+CREATE USER 'Lecturere'@'localhost' IDENTIFIED BY 'lecturer1234';
 GRANT ALL PRIVILEGES ON studentperformanceDB.*
 TO 'Lecturer'@'localhost';
 FLUSH PRIVILEGES;
@@ -2463,37 +2463,37 @@ GRANT SELECT ON studentperformanceDB.COMPUTER_ARCHITECTURE
 TO 'Student'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+
 GRANT SELECT ON studentperformanceDB.COMPUTER_NETWORK
 TO 'Student'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+
 GRANT SELECT ON studentperformanceDB.DATABASE_MANAGEMENT_SYSTEM 
 TO 'Student'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+
 GRANT SELECT ON studentperformanceDB.DBMS_PRACTICUM 
 TO 'Student'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+
 GRANT SELECT ON studentperformanceDB.DISCRETE_MATHEMATICS 
 TO 'Student'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+
 GRANT SELECT ON studentperformanceDB.ENGLISH 
 TO 'Student'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+
 GRANT SELECT ON studentperformanceDB.FUNDAMENTALS_MANAGEMENT 
 TO 'Student'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+
 GRANT SELECT ON studentperformanceDB.SERVER_SIDE_WEB
 TO 'Student'@'localhost';
 FLUSH PRIVILEGES;
