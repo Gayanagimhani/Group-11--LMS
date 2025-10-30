@@ -5,6 +5,71 @@ CREATE DATABASE studentperformanceDB;
 
 USE studentperformanceDB;
 
+CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'admin1234';
+GRANT ALL PRIVILEGES ON *.*
+TO 'Admin'@'localhost'
+WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+CREATE USER 'Dean'@'localhost' IDENTIFIED BY 'dean1234';
+GRANT ALL PRIVILEGES ON *.*
+TO 'Dean'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'lecturer1234';
+GRANT ALL PRIVILEGES ON *.*
+TO 'Lecturer'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'TechnicalOfficer'@'localhost' IDENTIFIED BY 'technical1234';
+GRANT SELECT,INSERT,UPDATE,DELETE ON studentperformanceDB.ATTENDANCE 
+TO 'TechnicalOfficer'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.COMPUTER_ARCHITECTURE
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.COMPUTER_NETWORK
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.DATABASE_MANAGEMENT_SYSTEM 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.DBMS_PRACTICUM 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.DISCRETE_MATHEMATICS 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.ENGLISH 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.FUNDAMENTALS_MANAGEMENT 
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'student1234';
+GRANT SELECT ON studentperformanceDB.SERVER_SIDE_WEB
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
+GRANT SELECT ON studentperformanceDB.FINAL_ATTENDANCE
+TO 'Student'@'localhost';
+FLUSH PRIVILEGES;
+
 -- create student details table
 
 CREATE TABLE STUDENT (
@@ -264,7 +329,7 @@ Course_name varchar(255),
 Type ENUM('Theory','Practical','Both') NOT NULL,
 Course_credit INT NOT NULL,
 Year ENUM('1st','2nd','3rd','4th') NOT NULL,
-Semester ENUM('I semester','II semester','III semester') NOT NULL,
+Semester ENUM('I semester','II semester') NOT NULL,
 Department varchar(3),
 Hours INT NOT NULL,
 Lec_id char(6),
