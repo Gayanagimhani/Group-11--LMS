@@ -2438,18 +2438,18 @@ CREATE TABLE FINAL_ATTENDANCE (
 -- user privileges
 
 CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'admin1234';
-GRANT ALL PRIVILEGES ON *.*
+GRANT ALL PRIVILEGES ON studentperformanceDB.*
 TO 'Admin'@'localhost'
 WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 CREATE USER 'Dean'@'localhost' IDENTIFIED BY 'dean1234';
-GRANT ALL PRIVILEGES ON *.*
+GRANT ALL PRIVILEGES ON studentperformanceDB.*
 TO 'Dean'@'localhost';
 FLUSH PRIVILEGES;
 
 CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'lecturer1234';
-GRANT ALL PRIVILEGES ON *.*
+GRANT ALL PRIVILEGES ON studentperformanceDB.*
 TO 'Lecturer'@'localhost';
 FLUSH PRIVILEGES;
 
