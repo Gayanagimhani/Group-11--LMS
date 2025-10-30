@@ -3787,6 +3787,32 @@ GROUP BY a.Reg_no, at.Course_id, c.Course_name;
 SELECT * FROM V_Practical_Attendance
 WHERE Course_id = 'ICT1233';
 
+
+
+-- Both Theory and Practical Attendance
+
+CREATE OR REPLACE VIEW V_Both_Attendance AS
+SELECT 
+    a.Reg_no,
+    at.Course_id,
+    c.Course_name,
+    'Theory + Practical' AS Session_Type,
+    COUNT(*) AS Total_Sessions,
+    SUM(CASE WHEN at.Attendance_status = 'Present' THEN 1 ELSE 0 END) AS Attended,
+    ROUND(
+        (SUM(CASE WHEN at.Attendance_status = 'Present' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2
+    ) AS Percentage
+FROM ATTENDANCE at
+JOIN COURSE_UNIT c ON at.Course_id = c.Course_id
+JOIN STUDENT a ON at.Reg_no = a.Reg_no
+WHERE at.Session_type IN ('Theory', 'Practical')
+GROUP BY a.Reg_no, at.Course_id, c.Course_name;
+
+-- Example: view attendance for one course
+SELECT * FROM V_Both_Attendance
+WHERE Course_id = 'ICT1233';
+
+
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- GRADES VIEWS
 
