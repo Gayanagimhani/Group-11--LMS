@@ -3171,7 +3171,7 @@ END //
 
 DELIMITER ;
 
-call procedures
+-- call procedures
 
 CALL Update_Grades('ENGLISH');
 CALL Update_Grades('COMPUTER_NETWORK');
